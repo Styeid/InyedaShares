@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="27dp"
+    android:layout_margin="3dp"
+    android:background="#031014"
+    android:orientation="horizontal"
+    app:cardBackgroundColor="#031014">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvbaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#052739"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="user" />
+
+        <TextView
+            android:id="@+id/tvbab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#137898"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="datum" />
+
+        <TextView
+            android:id="@+id/tvbas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#0B4158"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="totalf" />
+
+        <TextView
+            android:id="@+id/tvbat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#1EA6C0"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="multig" />
+
+        <TextView
+            android:id="@+id/tvbau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#5CBBC8"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="totalg" />
+
+        <TextView
+            android:id="@+id/tvbav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#1EA6C0"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="multip" />
+
+        <TextView
+            android:id="@+id/tvbaw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#5CBBC8"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="totalp" />
+
+        <TextView
+            android:id="@+id/tvbax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#0B4158"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="totalf" />
+
+        <TextView
+            android:id="@+id/tvbay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#1EA6C0"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="multig" />
+
+        <TextView
+            android:id="@+id/tvbaz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#5CBBC8"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="totalg" />
+
+        <TextView
+            android:id="@+id/tvbba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#1EA6C0"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="multip" />
+
+        <TextView
+            android:id="@+id/tvbbb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#5CBBC8"
+            android:fontFamily="@font/ubuntu_light"
+            android:textAlignment="center"
+            android:textColor="#E7E4DA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="totalp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

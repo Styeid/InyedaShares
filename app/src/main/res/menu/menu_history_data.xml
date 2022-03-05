@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/icdatahistory"
+        android:title="DataHistory"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/icfirstfollowup"
+        android:title="FirstFollowUp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/icsecfollowup"
+        android:title="SecFollowUp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ictrifollowup"
+        android:title="TriFollowUp"
+        app:showAsAction="always" />
+</menu>
