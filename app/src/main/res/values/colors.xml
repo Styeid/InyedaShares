@@ -14,5 +14,5 @@
     <color name="kader_color">#B20D47A2</color>
     <color name="color_below_zero">#DC1E0B</color>
     <color name="color_above_zero">#33691E</color>
-    <color name="color_equal_zero">#AAAAAA</color>
+    <color name="color_equal_zero">#68E7E4DA</color>
 </resources>

@@ -4,11 +4,176 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#68E7E4DA"
     tools:context=".SecFollowUpActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvdatapostc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#01579B" />
+        android:layout_marginTop="32dp"
+        android:background="#01579B"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvreserveb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Reserve" />
+
+    <TextView
+        android:id="@+id/tvfundac"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="224dp"
+        android:text="WorldEquityIndex"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/tvreserveb"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvfundbd"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:text="EuroCreditF"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/textView35"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="#0B4158"
+        android:text="To"
+        android:textAlignment="center"
+        android:textColor="#68E7E4DA"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/tvfundac"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_marginStart="28dp"
+        android:background="#1EA6C0"
+        android:text="X/"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/textView31"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="#5CBBC8"
+        android:text="PL"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/textView32"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="#1EA6C0"
+        android:text="%*"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/textView33"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_marginStart="12dp"
+        android:background="#5CBBC8"
+        android:text="%"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/textView34"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="#0B4158"
+        android:text="To"
+        android:textAlignment="center"
+        android:textColor="#68E7E4DA"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/tvfundbd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="#1EA6C0"
+        android:text="X/"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/textView40"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="#5CBBC8"
+        android:text="PL"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/textView36"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="#1EA6C0"
+        android:text="%*"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintStart_toEndOf="@+id/textView38"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_marginEnd="16dp"
+        android:background="#5CBBC8"
+        android:text="%"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvdatapostc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView39"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

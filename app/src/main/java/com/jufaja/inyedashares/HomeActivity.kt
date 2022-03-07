@@ -1,5 +1,6 @@
 package com.jufaja.inyedashares
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,25 +8,89 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
+import com.jufaja.inyedashares.models.DataPost
+import com.jufaja.inyedashares.models.User
+import kotlinx.android.synthetic.main.activity_data_list.*
 
 private const val TAG = "HomeActivity"
-class HomeActivity : AppCompatActivity() {
+private  const val EXTRA_USERNAME = "EXTRA_USERNAME"
+open class HomeActivity : AppCompatActivity() {
+
+    var dataPostLimit: Long = 20
+    var fieldOrderBy: String = "abdate"
+    var signedInUser: User? = null
+    private lateinit var firestoreDb: FirebaseFirestore
+    private lateinit var postz: MutableList<DataPost>
+    private lateinit var adapterHome: HomeDataAdapter
+
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-    }
+        setContentView(R.layout.activity_data_list)
 
+        //-----
+        // 1 Create the layout file which represent one post = item_datapost(a,b,c,d)xml
+        // 2 Create data source
+        postz = mutableListOf()
+        // 3 Create Adapter
+        adapterHome = HomeDataAdapter(this, postz)
+        // 4 Bind the adapter and layout manager to the recyclerview
+        rvdataposta.adapter = adapterHome
+        rvdataposta.layoutManager = LinearLayoutManager(this)
+        //-----
+        // retrieve data (query) from Firestore
+        firestoreDb = FirebaseFirestore.getInstance()
+
+        firestoreDb.collection("users")
+            .document(FirebaseAuth.getInstance().currentUser?.uid as String)
+            .get()
+            .addOnSuccessListener { userSnapshot ->
+                signedInUser = userSnapshot.toObject(User::class.java)
+                Log.i(TAG, "Signed in user: $signedInUser")
+            }
+            .addOnFailureListener { exeption ->
+                Log.i(TAG, "Failure fetching signed in user", exeption)
+            }
+
+        var datapostReference = firestoreDb
+            .collection("datapost")
+            .limit(dataPostLimit)
+            .orderBy(fieldOrderBy, Query.Direction.DESCENDING)
+
+        //-!-//__code for filtering by user__//
+        //val username = intent.getStringExtra(EXTRA_USERNAME)
+        //if (username != null) {
+        //    supportActionBar?.title = username
+        //    datapostReference = datapostReference.whereEqualTo("aauser.username", username)
+        //}
+        datapostReference.addSnapshotListener { snapshot, exeption ->
+            if (exeption != null || snapshot == null) {
+                Log.e(TAG, "Error. Exeption when querying datapost ")
+                return@addSnapshotListener
+            }
+            val dataPostList = snapshot.toObjects(DataPost::class.java)
+            postz.clear()
+            postz.addAll(dataPostList)
+            adapterHome.notifyDataSetChanged()
+            for (dataPost in dataPostList) {
+                Log.i(TAG, "dataPosts $dataPost")
+            }
+        }
+    }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_home, menu)
         return super.onCreateOptionsMenu(menu)
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.icgodatalist) {
-            Log.i(TAG, "Info. Go to Datalist 1.0")
+            Log.i(TAG, "Info. Go to DataHistory/RefreshData")
             val intent = Intent(this, DataListActivity::class.java)
-            Toast.makeText(this, "Data Screen", Toast.LENGTH_SHORT).show()
+            //intent.putExtra(EXTRA_USERNAME, signedInUser?.username)
+            Toast.makeText(this, "Data History\n\tRefresh", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
         if (item.itemId == R.id.iclogout) {

@@ -5,12 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
 private const val TAG = "LoginActivity"
-class LoginActivity : AppCompatActivity() {
+open class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -33,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                 btnlogin.isEnabled = true
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "succes", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show()
                     goHomeActivity()
                 } else {
                     Log.i(TAG, "Info. Login has failed")
@@ -44,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goHomeActivity() {
-        Log.i(TAG, "Info. goHomeactivity")
+        Log.i(TAG, "Info. go_HomeActivity")
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
         finish()

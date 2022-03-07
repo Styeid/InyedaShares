@@ -18,4 +18,8 @@
         android:id="@+id/ictrifollowup"
         android:title="TriFollowUp"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/iclogout"
+        android:icon="@drawable/ic_dots"
+        android:title="Logout" />
 </menu>
