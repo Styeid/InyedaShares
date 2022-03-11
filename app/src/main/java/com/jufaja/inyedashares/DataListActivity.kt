@@ -28,7 +28,7 @@ open class DataListActivity : HomeActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.icdatahistory) {
-            Log.i(TAG, "Info. Go to FirstFollowUp/RefreshData")
+            Log.i(TAG, "Info. Data History/RefreshData")
             val intent = Intent(this, DataListActivity::class.java)
             //intent.putExtra(EXTRA_USERNAME, signedInUser?.username)
             finish()

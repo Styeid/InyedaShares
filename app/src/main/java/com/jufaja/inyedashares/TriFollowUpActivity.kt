@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_tri_follow_up.*
 
 private const val TAG = "TriFollowUpActivity"
 private  const val EXTRA_USERNAME = "EXTRA_USERNAME"
-class TriFollowUpActivity : DataListActivity() {
+class TriFollowUpActivity : FirstFollowUpActivity() {
 
     private lateinit var firestoreDb: FirebaseFirestore
     private lateinit var postz: MutableList<DataPost>

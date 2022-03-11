@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InyedaShares">
         <activity
+            android:name=".ARefreshDataActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".CreateActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape" />
+        <activity
             android:name=".TriFollowUpActivity"
             android:exported="false"
             android:screenOrientation="sensorLandscape" />
@@ -34,7 +43,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:screenOrientation="sensorLandscape" >
+            android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

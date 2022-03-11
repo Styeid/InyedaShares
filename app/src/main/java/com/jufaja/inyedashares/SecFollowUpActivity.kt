@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_sec_follow_up.*
 
 private const val TAG = "SecFollowUpActivity"
 private  const val EXTRA_USERNAME = "EXTRA_USERNAME"
-class SecFollowUpActivity : DataListActivity() {
+class SecFollowUpActivity : FirstFollowUpActivity() {
 
     private lateinit var firestoreDb: FirebaseFirestore
     private lateinit var postz: MutableList<DataPost>
