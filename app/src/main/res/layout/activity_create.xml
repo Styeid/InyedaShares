@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_backcolor"
+    tools:context=".CreateActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/oldtext_backg"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13999999">
+
+        <LinearLayout
+            android:id="@+id/lldataone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#68E7E4DA"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvaa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvae"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvaf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvaj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lldatafou"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#68E7E4DA"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvaq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lldatathree"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#68E7E4DA"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvaw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvaz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lldatatwo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#68E7E4DA"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvbh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="@string/fill_data" />
+
+            <TextView
+                android:id="@+id/tvbreserve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#282828"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textSize="34sp"
+                tools:text="Reserve" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnsubmita"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="360dp"
+        android:backgroundTint="@color/data_text_color"
+        android:fontFamily="@font/vt323"
+        android:text="@string/clicker_submit"
+        android:textColor="#00B20D"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93"
+        app:rippleColor="@color/oldtext" />
+
+    <Button
+        android:id="@+id/btncancela"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="164dp"
+        android:backgroundTint="@color/data_text_color"
+        android:fontFamily="@font/vt323"
+        android:text="@string/clicker_cancel"
+        android:textColor="#FF0000"
+        android:textSize="34sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnsubmita"
+        app:layout_constraintStart_toEndOf="@+id/btnsubmita"
+        app:layout_constraintTop_toTopOf="@+id/btnsubmita"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="#FF0000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
