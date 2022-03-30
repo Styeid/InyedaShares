@@ -12,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InyedaShares">
         <activity
-            android:name=".ARefreshDataActivity"
-            android:exported="false"
+            android:name=".RefreshDataActivity"
             android:theme="@style/Theme.AppCompat.Translucent"
+            android:exported="false"
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".CreateActivity"

@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jufaja.inyedashares.models.DataPost
-import kotlinx.android.synthetic.main.item_dataposta.view.*
 import kotlinx.android.synthetic.main.item_datapostb.view.*
-import kotlinx.android.synthetic.main.item_datapostd.view.*
 
 class FirstDataAdapter (val context: Context, val postz: List<DataPost>) :
     RecyclerView.Adapter<FirstDataAdapter.ViewHolder>() {

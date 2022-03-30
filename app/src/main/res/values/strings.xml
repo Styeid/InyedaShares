@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">InyedaShares</string>
+
     <string name="fill_data">datapost</string>
     <string name="fill_data_amount">Amount Partys</string>
     <string name="fill_data_funda">Name A</string>
@@ -10,11 +11,12 @@
     <string name="fill_data_valueb">Value B</string>
     <string name="fill_data_valuec">Value C</string>
     <string name="fill_data_valued">Value D</string>
-    <!--string name="fill_data_amount">Cancel</string -->
+    <string name="fill_data_reserve">\t****\t</string>
     <!--string name="fill_data_amount">Cancel</string -->
     <string name="clicker_submit">Submit</string>
     <string name="clicker_cancel">Cancel</string>
-    <string name="clicker_refresh_data">Re</string>
+    <string name="clicker_refresh_data">Refresh</string>
+    <string name="clicker_view_data">View</string>
     <string name="title_row_user">User</string>
     <string name="title_row_date">Date</string>
     <string name="title_row_totalvalue">TotalValue</string>

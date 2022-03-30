@@ -9,12 +9,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvdataposta"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="32dp"
         android:background="#01579B"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </androidx.recyclerview.widget.RecyclerView>
 
@@ -22,27 +23,34 @@
         android:id="@+id/tvhomedata"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
+        android:layout_marginStart="3dp"
         android:layout_weight="1"
+        android:background="#052739"
+        android:fontFamily="@font/ubuntu_light"
         android:text="@string/title_row_user"
         android:textAlignment="center"
+        android:textColor="#E7E4DA"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/rvdataposta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvhomedate"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
+        android:layout_margin="3dp"
         android:layout_weight="1"
+        android:background="#137898"
+        android:fontFamily="@font/ubuntu_light"
         android:text="@string/title_row_date"
         android:textAlignment="center"
+        android:textColor="@color/data_text_color"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvhomedata"
         app:layout_constraintStart_toEndOf="@+id/tvhomedata"
         app:layout_constraintTop_toTopOf="@+id/tvhomedata" />
@@ -51,84 +59,89 @@
         android:id="@+id/tvhometotalvalue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
+        android:layout_margin="3dp"
         android:layout_weight="1"
+        android:background="#0B4158"
+        android:fontFamily="@font/ubuntu_light"
         android:text="@string/title_row_totalvalue"
         android:textAlignment="center"
+        android:textColor="#E7E4DA"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvhomedate"
         app:layout_constraintStart_toEndOf="@+id/tvhomedate"
         app:layout_constraintTop_toTopOf="@+id/tvhomedate" />
 
     <TextView
         android:id="@+id/tvhomeprofitday"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_margin="3dp"
         android:layout_weight="1"
+        android:background="#1EA6C0"
+        android:fontFamily="@font/ubuntu_light"
         android:text="@string/title_row_profitday"
         android:textAlignment="center"
+        android:textColor="@color/transparent_backcolor"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvhometotalvalue"
         app:layout_constraintStart_toEndOf="@+id/tvhometotalvalue"
         app:layout_constraintTop_toTopOf="@+id/tvhometotalvalue" />
 
     <TextView
         android:id="@+id/tvhomeprofittotal"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
+        android:layout_margin="3dp"
         android:layout_weight="1"
+        android:background="#5CBBC8"
+        android:fontFamily="@font/ubuntu_light"
         android:text="@string/title_row_profittotal"
         android:textAlignment="center"
+        android:textColor="@color/transparent_backcolor"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvhomeprofitday"
         app:layout_constraintStart_toEndOf="@+id/tvhomeprofitday"
         app:layout_constraintTop_toTopOf="@+id/tvhomeprofitday" />
 
     <TextView
         android:id="@+id/tvhomepercentageday"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_margin="3dp"
         android:layout_weight="1"
+        android:background="#1EA6C0"
+        android:fontFamily="@font/ubuntu_light"
         android:text="@string/title_row_percentageday"
         android:textAlignment="center"
+        android:textColor="@color/transparent_backcolor"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvhomeprofittotal"
         app:layout_constraintStart_toEndOf="@+id/tvhomeprofittotal"
         app:layout_constraintTop_toTopOf="@+id/tvhomeprofittotal" />
 
     <TextView
         android:id="@+id/tvhomepercentagetotal"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginEnd="40dp"
+        android:layout_margin="3dp"
         android:layout_weight="1"
+        android:background="#5CBBC8"
+        android:fontFamily="@font/ubuntu_light"
         android:text="@string/title_row_percentagetotal"
         android:textAlignment="center"
+        android:textColor="@color/transparent_backcolor"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvhomepercentageday"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toEndOf="@+id/tvhomepercentageday"
         app:layout_constraintTop_toTopOf="@+id/tvhomepercentageday" />
 
-    <TextView
-        android:id="@+id/tvactueledate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/ubuntu_light"
-        android:text="07-03-2022"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="07-03-2022" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabadddatapost"
+        android:id="@+id/fabupdatascreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -138,201 +151,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/fab_adddatapost" />
-
-    <TextView
-        android:id="@+id/tvfundnamea"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:text="WorldEquiltyIndexF"
-        android:textAlignment="center"
-        android:textColorHint="@color/transparent_backcolor"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/fill_data_funda" />
-
-    <TextView
-        android:id="@+id/tvfundnameb"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/tvfundnamea"
-        app:layout_constraintTop_toTopOf="@+id/tvfundnamea"
-        tools:text="@string/fill_data_fundb" />
-
-    <TextView
-        android:id="@+id/tvfundnamec"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/tvfundnameb"
-        app:layout_constraintTop_toTopOf="@+id/tvfundnameb"
-        tools:text="@string/fill_data_fundc" />
-
-    <TextView
-        android:id="@+id/tvfundnamed"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/tvfundnamec"
-        app:layout_constraintTop_toTopOf="@+id/tvfundnamec"
-        tools:text="@string/fill_data_fundd" />
-
-    <TextView
-        android:id="@+id/tvamountaxyz"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="1234.5678"
-        android:textAlignment="center"
-        android:textColorHint="@color/transparent_backcolor"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
-        app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
-        app:layout_constraintTop_toBottomOf="@+id/tvfundnamea"
-        tools:text="@string/fill_data_amount" />
-
-    <TextView
-        android:id="@+id/tvamountbxyz"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvfundnameb"
-        app:layout_constraintStart_toStartOf="@+id/tvfundnameb"
-        app:layout_constraintTop_toBottomOf="@+id/tvfundnameb"
-        tools:text="@string/fill_data_amount" />
-
-    <TextView
-        android:id="@+id/tvamountcxyz"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvfundnamec"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvfundnamec"
-        app:layout_constraintTop_toBottomOf="@+id/tvfundnamec"
-        tools:text="@string/fill_data_amount" />
-
-    <TextView
-        android:id="@+id/tvamountdxyz"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvfundnamed"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvfundnamed"
-        app:layout_constraintTop_toBottomOf="@+id/tvfundnamed"
-        tools:text="@string/fill_data_amount" />
-
-    <TextView
-        android:id="@+id/tvvaluea"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="10.77"
-        android:textAlignment="center"
-        android:textColorHint="@color/transparent_backcolor"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
-        app:layout_constraintTop_toBottomOf="@+id/tvamountaxyz"
-        tools:text="@string/fill_data_valuea" />
-
-    <TextView
-        android:id="@+id/tvvalueb"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvamountbxyz"
-        app:layout_constraintStart_toStartOf="@+id/tvamountbxyz"
-        app:layout_constraintTop_toBottomOf="@+id/tvamountbxyz"
-        tools:text="@string/fill_data_valueb" />
-
-    <TextView
-        android:id="@+id/tvvaluec"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvamountcxyz"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvamountcxyz"
-        app:layout_constraintTop_toBottomOf="@+id/tvamountcxyz"
-        tools:text="@string/fill_data_valuec" />
-
-    <TextView
-        android:id="@+id/tvvalued"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvamountdxyz"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvamountdxyz"
-        app:layout_constraintTop_toBottomOf="@+id/tvamountdxyz"
-        tools:text="@string/fill_data_valued" />
-
-    <ImageButton
-        android:id="@+id/btnrefresha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="274dp"
-        android:layout_marginTop="234dp"
-        android:backgroundTint="#6D01579B"
-        android:contentDescription="@string/clicker_refresh_data"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_refreshdata" />
-
-    <ImageButton
-        android:id="@+id/btnrefreshb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="234dp"
-        android:backgroundTint="#6D01579B"
-        android:contentDescription="@string/clicker_refresh_data"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnrefresha"
-        app:layout_constraintStart_toEndOf="@+id/btnrefresha"
-        app:layout_constraintTop_toTopOf="@+id/btnrefresha"
-        app:srcCompat="@drawable/ic_refreshdata" />
-
-    <ImageButton
-        android:id="@+id/btnrefreshc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="234dp"
-        android:backgroundTint="#6D01579B"
-        android:contentDescription="@string/clicker_refresh_data"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnrefreshb"
-        app:layout_constraintStart_toEndOf="@+id/btnrefreshb"
-        app:layout_constraintTop_toTopOf="@+id/btnrefreshb"
-        app:srcCompat="@drawable/ic_refreshdata" />
-
-    <ImageButton
-        android:id="@+id/btnrefreshd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="234dp"
-        android:backgroundTint="#6D01579B"
-        android:contentDescription="@string/clicker_refresh_data"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnrefreshc"
-        app:layout_constraintStart_toEndOf="@+id/btnrefreshc"
-        app:layout_constraintTop_toTopOf="@+id/btnrefreshc"
-        app:srcCompat="@drawable/ic_refreshdata" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

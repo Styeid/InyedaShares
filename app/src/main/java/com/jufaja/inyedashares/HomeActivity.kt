@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,6 +32,9 @@ open class HomeActivity : AppCompatActivity() {
     var dataPostLimit: Long = 20
     var fieldOrderBy: String = "abdate"
     var signedInUser: User? = null
+
+    lateinit var tvfundnamea: TextView
+
     private lateinit var firestoreDb: FirebaseFirestore
     private lateinit var postz: MutableList<DataPost>
     private lateinit var adapterHome: HomeDataAdapter
@@ -43,12 +45,7 @@ open class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data_list)
         //setHome()
-        btnrefresha.setOnClickListener {
-            Log.i(TAG,"Info. Go to RefreshData A")
-            val intent = Intent(this,ARefreshDataActivity::class.java)
-            Toast.makeText(this, "Refresh Data Fund A", Toast.LENGTH_SHORT).show()
-            startActivity(intent)
-        }
+
         ///////////////////////////////////////////////
 
         ///////////////////////////////////////////////
@@ -100,12 +97,14 @@ open class HomeActivity : AppCompatActivity() {
                 Log.i(TAG, "dataPosts $dataPost")
             }
         }
-        fabadddatapost.setOnClickListener {
-            val intent = Intent(this,CreateActivity::class.java)
+        fabupdatascreen.setOnClickListener {
+            val intent = Intent(this, RefreshDataActivity::class.java)
+            Log.i(TAG, "Info. go to Update Data screen")
+            Toast.makeText(this, "Update Screen", Toast.LENGTH_LONG).show()
             startActivity(intent)
         }
     }
-//////////////////////////////
+////////////////////////////// test135
     private fun setHome() = CoroutineScope(IO).launch {
         val lastdataQuery = dataPostCollectionRef
             .whereEqualTo("aauser", "Bram")
@@ -151,7 +150,7 @@ open class HomeActivity : AppCompatActivity() {
         if (item.itemId == R.id.icgodatalist) {
             Log.i(TAG, "Info. Go to FirstFollowUp/RefreshData")
             val intent = Intent(this, FirstFollowUpActivity::class.java)
-            //intent.putExtra(EXTRA_USERNAME, signedInUser?.username)
+            intent.putExtra(EXTRA_USERNAME, signedInUser?.username)
             Toast.makeText(this, "FirstFollowUp\n\tRefresh", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
