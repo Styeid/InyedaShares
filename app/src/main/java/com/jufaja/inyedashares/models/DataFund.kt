@@ -1,8 +1,17 @@
 package com.jufaja.inyedashares.models
 
 data class DataFund (
-    var name: String = "",
-    var numberz: String = "",
+    var namez: String = "",
+    var numberz: Int = 0,
     var partysz: String = "",
-    var valuez: String = ""
+    var inlay: String = "",
+    var valuez: String = "",
+    var totalfundz: String = "",
+    var multigrowz: String = "",
+    var totalgrowz: String = "",
+    var multipercz: String = "",
+    var totalpercz: String = "",
+    var partyfundz: String = "",
+    var partygrowz: String = "",
+    var partypercz: String = ""
         )

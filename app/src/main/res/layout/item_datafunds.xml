@@ -16,6 +16,9 @@
             android:id="@+id/tvfname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
             android:background="@color/transparent_backcolor"
             android:fontFamily="@font/vt323"
             android:textAlignment="center"
@@ -27,6 +30,8 @@
             android:id="@+id/tvfvalue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
             android:background="@color/transparent_backcolor"
             android:fontFamily="@font/vt323"
             android:textAlignment="center"
@@ -38,12 +43,28 @@
             android:id="@+id/tvfpartys"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
             android:background="@color/transparent_backcolor"
             android:fontFamily="@font/vt323"
             android:textAlignment="center"
             android:textColor="@color/oldtext"
             android:textSize="20sp"
             tools:text="Partys" />
+
+        <TextView
+            android:id="@+id/tvfinlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/transparent_backcolor"
+            android:fontFamily="@font/vt323"
+            android:textAlignment="center"
+            android:textColor="@color/oldtext"
+            android:textSize="20sp"
+            tools:text="Inlay" />
 
     </LinearLayout>
 

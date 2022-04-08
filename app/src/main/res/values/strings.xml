@@ -1,18 +1,24 @@
 <resources>
     <string name="app_name">InyedaShares</string>
-
     <string name="fill_data">datapost</string>
+
+    <string name="fill_data_fundname">Name</string>
     <string name="fill_data_amount">Amount Partys</string>
-    <string name="fill_data_funda">Name A</string>
-    <string name="fill_data_fundb">Name B</string>
-    <string name="fill_data_fundc">Name C</string>
+    <string name="fill_data_fundvalue">Value</string>
+    <string name="fill_data_inlay">Inlay</string>
+
     <string name="fill_data_fundd">Name D</string>
-    <string name="fill_data_valuea">Value A</string>
+
     <string name="fill_data_valueb">Value B</string>
     <string name="fill_data_valuec">Value C</string>
     <string name="fill_data_valued">Value D</string>
     <string name="fill_data_reserve">\t****\t</string>
+    <string name="fill_data_reserve2">servee</string>
     <!--string name="fill_data_amount">Cancel</string -->
+    <string name="switcher_OnOff"> </string>
+    <string name="clicker_CopytoFirebase">F-Base</string>
+    <string name="clicker_Calculate">Calc. On</string>
+    <string name="clicker_De_Calculate">Calc. Off</string>
     <string name="clicker_submit">Submit</string>
     <string name="clicker_cancel">Cancel</string>
     <string name="clicker_refresh_data">Refresh</string>
@@ -24,18 +30,21 @@
     <string name="title_row_profittotal">ProfitTotal</string>
     <string name="title_row_percentageday">% Daily</string>
     <string name="title_row_percentagetotal">% Total</string>
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
-    <!--string name="title_row_user">Cancel</string -->
+    <string name="fundnamea">P0fundnamea</string>
+    <string name="afpartyvaluea">afpartyvaluea</string>
+    <string name="amountax">P0amountaz</string >
+    <string name="amountay">P0amountaz</string >
+    <string name="amountaz">P0amountaz</string >
+    <string name="amountaxyz">P0amountaxyz</string>
+    <string name="astotalfunda">astotalfunda</string>
+    <string name="atmultigrowa">atmultigrowa</string>
+    <string name="autotalgrowa">autotalgrowa</string>
+    <string name="avmultiperca">avmultiperca</string>
+    <string name="awtotalperca">awtotalperca</string>
+    <string name="acpartyfunda">acpartyfunda</string>
+    <string name="adpartygrowa">adpartygrowa</string>
+    <string name="aepartyperca">aepartyperca</string>
+
     <!--string name="title_row_user">Cancel</string -->
     <!--string name="title_row_user">Cancel</string -->
     <!--string name="title_row_user">Cancel</string -->

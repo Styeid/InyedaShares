@@ -2,43 +2,35 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/xmlactifrexh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/transparent_backcolor"
     tools:context=".RefreshDataActivity">
 
-    <LinearLayout
-        android:id="@+id/llr"
+    <Button
+        android:id="@+id/btntest123"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="1dp"
-        android:background="@color/oldtext_backg"
-        android:orientation="horizontal"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="88dp" />
+
+    <TextView
+        android:id="@+id/tvtest123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/oldtext"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.00999999">
-
-        <TextView
-            android:id="@+id/tvsavedate"
-            android:layout_width="1204dp"
-            android:layout_height="32dp"
-            android:layout_margin="2dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:background="@color/transparent_backcolor"
-            android:fontFamily="@font/vt323"
-            android:hint=" 00-00-0000"
-            android:textAlignment="textStart"
-            android:textColor="@color/oldtext"
-            android:textColorHint="@color/oldtext_backg"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text=" 07-03-2022" />
-    </LinearLayout>
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toEndOf="@+id/lla"
+        app:layout_constraintTop_toTopOf="@+id/lla"
+        app:layout_constraintVertical_bias="0.816"
+        tools:text="test123" />
 
     <LinearLayout
         android:id="@+id/lla"
@@ -51,166 +43,23 @@
         app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13999999">
+        app:layout_constraintVertical_bias="0.100000024">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvdatafunds"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/tvreserve10"
-            android:layout_width="300dp"
-            android:layout_height="1dp"
-            android:layout_margin="1dp"
-            android:background="@color/transparent_backcolor"
-            android:fontFamily="@font/vt323"
-            android:textAlignment="center"
-            android:textColor="@color/oldtext"
-            android:textColorHint="@color/oldtext_backg"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/tvsavedate"
-            app:layout_constraintTop_toBottomOf="@+id/tvsavedate"
-            tools:text="@string/fill_data_reserve" />
-
-        <TextView
-            android:id="@+id/tvfundnamea"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
-            android:background="@color/transparent_backcolor"
-            android:fontFamily="@font/vt323"
-            android:textAlignment="center"
-            android:textColor="@color/oldtext"
-            android:textColorHint="@color/oldtext_backg"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvreserve2"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/tvreserve2"
-            app:layout_constraintTop_toBottomOf="@+id/tvreserve2"
-            tools:text="@string/fill_data_funda" />
-
-        <TextView
-            android:id="@+id/tvvaluea"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
-            android:background="@color/transparent_backcolor"
-            android:fontFamily="@font/vt323"
-            android:textAlignment="center"
-            android:textColor="@color/oldtext"
-            android:textColorHint="@color/oldtext_backg"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
-            app:layout_constraintTop_toBottomOf="@+id/tvamountaxyz"
-            tools:text="@string/fill_data_valuea" />
-
-        <TextView
-            android:id="@+id/tvamountaxyz"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
-            android:background="@color/transparent_backcolor"
-            android:fontFamily="@font/vt323"
-            android:inputType="numberDecimal"
-            android:textAlignment="center"
-            android:textColor="@color/oldtext"
-            android:textColorHint="@color/oldtext_backg"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
-            app:layout_constraintTop_toBottomOf="@+id/tvfundnamea"
-            tools:text="@string/fill_data_amount" />
-
-        <TextView
-            android:id="@+id/tvamountax"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
-            android:background="@color/transparent_backcolor"
-            android:fontFamily="@font/vt323"
-            android:textAlignment="textEnd"
-            android:textColor="@color/oldtext"
-            android:textColorHint="@color/oldtext_backg"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/tvsavedate"
-            app:layout_constraintTop_toBottomOf="@+id/tvsavedate"
-            tools:text="@string/fill_data_reserve" />
-
-        <TextView
-            android:id="@+id/tvamountay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
-            android:background="@color/transparent_backcolor"
-            android:fontFamily="@font/vt323"
-            android:textAlignment="textEnd"
-            android:textColor="@color/oldtext"
-            android:textColorHint="@color/oldtext_backg"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/tvsavedate"
-            app:layout_constraintTop_toBottomOf="@+id/tvsavedate"
-            tools:text="@string/fill_data_reserve" />
-
-        <TextView
-            android:id="@+id/tvamountaz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
-            android:background="@color/transparent_backcolor"
-            android:fontFamily="@font/vt323"
-            android:textAlignment="textEnd"
-            android:textColor="@color/oldtext"
-            android:textColorHint="@color/oldtext_backg"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/tvsavedate"
-            app:layout_constraintTop_toBottomOf="@+id/tvsavedate"
-            tools:text="@string/fill_data_reserve" />
-
-        <TextView
-            android:id="@+id/tvreserve11"
-            android:layout_width="300dp"
-            android:layout_height="3dp"
-            android:layout_margin="1dp"
-            android:background="@color/transparent_backcolor"
-            android:fontFamily="@font/vt323"
-            android:textAlignment="center"
-            android:textColor="@color/oldtext"
-            android:textColorHint="@color/oldtext_backg"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvvaluea"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/tvvaluea"
-            app:layout_constraintTop_toBottomOf="@+id/tvvaluea"
-            tools:text="@string/fill_data_reserve" />
-
         <EditText
             android:id="@+id/etfundnamechangea"
             android:layout_width="300dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:background="@color/transparent_color"
             android:backgroundTint="@color/transparent_backcolor"
             android:ems="10"
             android:fontFamily="@font/vt323"
-            android:hint="@string/fill_data_funda"
+            android:hint="@string/fill_data_fundname"
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
@@ -223,13 +72,13 @@
         <EditText
             android:id="@+id/etvaluea"
             android:layout_width="300dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:background="@color/transparent_color"
             android:backgroundTint="@color/transparent_backcolor"
             android:ems="10"
             android:fontFamily="@font/vt323"
-            android:hint="@string/fill_data_valuea"
+            android:hint="@string/fill_data_fundvalue"
             android:inputType="numberDecimal"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
@@ -242,7 +91,7 @@
         <EditText
             android:id="@+id/etamountax"
             android:layout_width="300dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:background="@color/transparent_color"
             android:backgroundTint="@color/transparent_backcolor"
@@ -261,7 +110,7 @@
         <EditText
             android:id="@+id/etamountay"
             android:layout_width="300dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:background="@color/transparent_color"
             android:backgroundTint="@color/transparent_backcolor"
@@ -280,7 +129,7 @@
         <EditText
             android:id="@+id/etamountaz"
             android:layout_width="300dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:background="@color/transparent_color"
             android:backgroundTint="@color/transparent_backcolor"
@@ -295,6 +144,548 @@
             app:layout_constraintEnd_toEndOf="@+id/etamountay"
             app:layout_constraintStart_toStartOf="@+id/etamountay"
             app:layout_constraintTop_toBottomOf="@+id/etamountay" />
+
+        <EditText
+            android:id="@+id/etinlaya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@color/transparent_color"
+            android:backgroundTint="@color/transparent_backcolor"
+            android:ems="10"
+            android:fontFamily="@font/vt323"
+            android:hint="@string/fill_data_inlay"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textColor="@color/transparent_backcolor"
+            android:textColorHint="@color/oldtext_backg"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/etamountay"
+            app:layout_constraintStart_toStartOf="@+id/etamountay"
+            app:layout_constraintTop_toBottomOf="@+id/etamountay" />
+
+        <LinearLayout
+            android:id="@+id/lla4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@color/transparent_backcolor"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/swcalculatinga"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent_backcolor"
+                android:fontFamily="@font/vt323"
+                android:text="@string/clicker_De_Calculate"
+                android:textAlignment="center"
+                android:textColor="@color/transparent_color"
+                android:textSize="16sp"
+                android:thumbTint="@color/oldtext"
+                android:trackTint="@color/oldtext_backg" />
+
+            <Button
+                android:id="@+id/btnfirebasea"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/transparent_backcolor"
+                android:fontFamily="@font/vt323"
+                android:text="@string/clicker_CopytoFirebase"
+                android:textColor="@color/transparent_dark"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lla1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvfundnamea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:background="@color/transparent_backcolor"
+                android:fontFamily="@font/vt323"
+                android:textAlignment="center"
+                android:textColor="@color/oldtext"
+                android:textColorHint="@color/oldtext_backg"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvreserve2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/tvreserve2"
+                app:layout_constraintTop_toBottomOf="@+id/tvreserve2"
+                tools:text="@string/fundnamea" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lla2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lla3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvinlaya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/oldtext_backg"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
+                    app:layout_constraintTop_toBottomOf="@+id/tvamountaxyz"
+                    tools:text="@string/fill_data_inlay" />
+
+                <TextView
+                    android:id="@+id/tvvaluea"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/oldtext_backg"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
+                    app:layout_constraintTop_toBottomOf="@+id/tvamountaxyz"
+                    tools:text="@string/afpartyvaluea" />
+
+                <TextView
+                    android:id="@+id/tvamountaxyz"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/oldtext_backg"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
+                    app:layout_constraintTop_toBottomOf="@+id/tvfundnamea"
+                    tools:text="@string/amountaxyz" />
+
+                <TextView
+                    android:id="@+id/tvamountax"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/oldtext_backg"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvsavedate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvsavedate"
+                    tools:text="@string/amountax" />
+
+                <TextView
+                    android:id="@+id/tvamountay"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/oldtext_backg"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvsavedate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvsavedate"
+                    tools:text="@string/amountay" />
+
+                <TextView
+                    android:id="@+id/tvamountaz"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/oldtext_backg"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvsavedate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvsavedate"
+                    tools:text="@string/amountaz" />
+
+                <TextView
+                    android:id="@+id/tvastotalfunda"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/astotalfunda"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/transparent_color"
+                    android:textSize="20sp"
+                    tools:text="@string/astotalfunda" />
+
+                <TextView
+                    android:id="@+id/tvatmultigrowa"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/atmultigrowa"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/transparent_color"
+                    android:textSize="20sp"
+                    tools:text="@string/atmultigrowa" />
+
+                <TextView
+                    android:id="@+id/tvautotalgrowa"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/autotalgrowa"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/transparent_color"
+                    android:textSize="20sp"
+                    tools:text="@string/autotalgrowa" />
+
+                <TextView
+                    android:id="@+id/tvavmultiperca"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/avmultiperca"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/transparent_color"
+                    android:textSize="20sp"
+                    tools:text="@string/avmultiperca" />
+
+                <TextView
+                    android:id="@+id/tvawtotalperca"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/awtotalperca"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/transparent_color"
+                    android:textSize="20sp"
+                    tools:text="@string/awtotalperca" />
+
+                <TextView
+                    android:id="@+id/tvadpartygrowa"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/adpartygrowa"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/transparent_color"
+                    android:textSize="20sp"
+                    tools:text="@string/adpartygrowa" />
+
+                <TextView
+                    android:id="@+id/tvaepartyperca"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/aepartyperca"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/transparent_color"
+                    android:textSize="20sp"
+                    tools:text="@string/aepartyperca" />
+
+                <TextView
+                    android:id="@+id/tvacpartyfunda"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/fill_data_reserve"
+                    android:textAlignment="center"
+                    android:textColor="@color/oldtext"
+                    android:textColorHint="@color/transparent_color"
+                    android:textSize="20sp"
+                    tools:text="@string/acpartyfunda" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lla4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvinlayold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/fill_data_inlay"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
+                    app:layout_constraintTop_toBottomOf="@+id/tvamountaxyz"
+                    tools:text="@string/fill_data_inlay" />
+
+                <TextView
+                    android:id="@+id/tvvalueaold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/afpartyvaluea"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
+                    app:layout_constraintTop_toBottomOf="@+id/tvamountaxyz"
+                    tools:text="@string/afpartyvaluea" />
+
+                <TextView
+                    android:id="@+id/tvamountaxyzold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/amountaxyz"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
+                    app:layout_constraintTop_toBottomOf="@+id/tvfundnamea"
+                    tools:text="@string/amountaxyz" />
+
+                <TextView
+                    android:id="@+id/tvreserveold1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/fill_data_reserve"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvsavedate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvsavedate"
+                    tools:text="@string/amountax" />
+
+                <TextView
+                    android:id="@+id/tvreserveold2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/fill_data_reserve"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvsavedate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvsavedate"
+                    tools:text="@string/amountay" />
+
+                <TextView
+                    android:id="@+id/tvreserveold3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/fill_data_reserve"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvsavedate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvsavedate"
+                    tools:text="@string/amountaz" />
+
+                <TextView
+                    android:id="@+id/tvtotalfundaold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/astotalfunda"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    tools:text="@string/astotalfunda" />
+
+                <TextView
+                    android:id="@+id/tvmultigrowaold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/atmultigrowa"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    tools:text="@string/atmultigrowa" />
+
+                <TextView
+                    android:id="@+id/tvtotalgrowaold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/autotalgrowa"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    tools:text="@string/autotalgrowa" />
+
+                <TextView
+                    android:id="@+id/tvmultipercaold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/avmultiperca"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    tools:text="@string/avmultiperca" />
+
+                <TextView
+                    android:id="@+id/tvtotalpercaold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/awtotalperca"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    tools:text="@string/awtotalperca" />
+
+                <TextView
+                    android:id="@+id/tvpartygrowaold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/adpartygrowa"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    tools:text="@string/adpartygrowa" />
+
+                <TextView
+                    android:id="@+id/tvpartypercaold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/aepartyperca"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    tools:text="@string/aepartyperca" />
+
+                <TextView
+                    android:id="@+id/tvpartyfundaold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/transparent_backcolor"
+                    android:fontFamily="@font/vt323"
+                    android:hint="@string/fill_data_reserve"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/transparent_dark"
+                    android:textColorHint="@color/transparent_dark"
+                    android:textSize="20sp"
+                    tools:text="@string/acpartyfunda" />
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -340,7 +731,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tvreserve4"
             app:layout_constraintTop_toBottomOf="@+id/tvreserve4"
-            tools:text="@string/fill_data_fundb" />
+            tools:text="@string/fill_data_fundname" />
 
         <TextView
             android:id="@+id/tvamountbxyz"
@@ -406,7 +797,7 @@
             android:backgroundTint="@color/transparent_backcolor"
             android:ems="10"
             android:fontFamily="@font/vt323"
-            android:hint="@string/fill_data_fundb"
+            android:hint="@string/fill_data_fundname"
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
@@ -535,7 +926,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tvreserve6"
             app:layout_constraintTop_toBottomOf="@+id/tvreserve6"
-            tools:text="@string/fill_data_fundc" />
+            tools:text="@string/fill_data_fundname" />
 
         <TextView
             android:id="@+id/tvamountcxyz"
@@ -601,7 +992,7 @@
             android:backgroundTint="@color/transparent_backcolor"
             android:ems="10"
             android:fontFamily="@font/vt323"
-            android:hint="@string/fill_data_fundc"
+            android:hint="@string/fill_data_fundname"
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
@@ -883,38 +1274,5 @@
             app:layout_constraintTop_toBottomOf="@+id/etamountdz" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnviewa"
-        android:layout_width="170dp"
-        android:layout_height="70dp"
-        android:fontFamily="@font/vt323"
-        android:onClick="copypasteAllA"
-        android:text="@string/clicker_view_data"
-        android:textAlignment="center"
-        android:textColor="@color/oldtext_backg"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.826" />
-
-    <Button
-        android:id="@+id/btnfresha"
-        android:layout_width="170dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="32dp"
-        android:fontFamily="@font/vt323"
-        android:text="@string/clicker_refresh_data"
-        android:textAlignment="center"
-        android:textColor="@color/oldtext_backg"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/btnviewa"
-        app:layout_constraintStart_toEndOf="@+id/btnviewa"
-        app:layout_constraintTop_toTopOf="@+id/btnviewa" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

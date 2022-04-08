@@ -14,6 +14,7 @@
     <color name="oldtext_backg">#FF00B20D</color>
     <color name="transparent_color">#68E7E4DA</color>
     <color name="transparent_backcolor">#DE0A0A0A</color>
+    <color name="transparent_dark">#31E7E4DA</color>
     <color name="kader_color">#B20D47A2</color>
     <color name="color_below_zero">#DC1E0B</color>
     <color name="color_above_zero">#33691E</color>

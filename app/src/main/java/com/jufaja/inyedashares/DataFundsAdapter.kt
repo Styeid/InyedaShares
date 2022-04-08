@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jufaja.inyedashares.models.DataFund
+import kotlinx.android.synthetic.main.activity_refresh_data.view.*
 import kotlinx.android.synthetic.main.item_datafunds.view.*
 
 class DataFundsAdapter (val context: Context, val datafundz: List<DataFund>) :
@@ -26,9 +27,10 @@ class DataFundsAdapter (val context: Context, val datafundz: List<DataFund>) :
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(datafundz: DataFund) {
-            itemView.tvfname.text = datafundz.name
+            itemView.tvfname.text = datafundz.namez
             itemView.tvfvalue.text = datafundz.valuez
             itemView.tvfpartys.text = datafundz.partysz
+            itemView.tvfinlay.text = datafundz.inlay
         }
     }
 }
