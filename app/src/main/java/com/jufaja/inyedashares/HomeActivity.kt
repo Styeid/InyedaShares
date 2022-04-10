@@ -44,11 +44,6 @@ open class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data_list)
-        //setHome()
-
-        ///////////////////////////////////////////////
-
-        ///////////////////////////////////////////////
         //-----
         // 1 Create the layout file which represent one post = item_datapost(a,b,c,d)xml
         // 2 Create data source
@@ -104,44 +99,6 @@ open class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-////////////////////////////// test135
-    private fun setHome() = CoroutineScope(IO).launch {
-        val lastdataQuery = dataPostCollectionRef
-            .whereEqualTo("aauser", "Bram")
-            .get()
-            .await()
-        if (lastdataQuery.documents.isNotEmpty()) {
-            for (tils1 in lastdataQuery) {
-                val dataBlok1 = firestoreDb.collection("datapost").document(tils1.id)
-                val blok_Code1 = findViewById<TextView>(R.id.tvfundnamea)
-                val blok_Color1 = findViewById<TextView>(R.id.tvamountaxyz)
-                val blok_ImageU1 = findViewById<TextView>(R.id.tvvaluea)
-                try {
-                    dataBlok1.get()
-                        .addOnSuccessListener { document ->
-                            if (document != null) {
-                                blok_Code1.text = document.getString("afpartyvaluea")
-                                blok_Color1.text = document.getString("agpartyfundb")
-                                blok_ImageU1.text = document.getString("ajpartyvalueb")
-                            } else {
-                                Log.i(TAG, "-1-NON DATA")
-                            }
-                        }
-                        .addOnFailureListener {
-                            Log.i(TAG, "-1-Fetching Failure")
-                        }
-                } catch (e: Exception) {
-                    Log.i(TAG, "-1-ERROR Fetching DATA")
-                }
-            }
-        } else {
-            withContext(Dispatchers.Main) {
-                Toast.makeText(
-                    this@HomeActivity, "Query = Empty", Toast.LENGTH_LONG).show()
-            }
-        }
-    }
-////////////////////////
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_home, menu)
         return super.onCreateOptionsMenu(menu)

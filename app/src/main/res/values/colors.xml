@@ -10,6 +10,7 @@
 
     <color name="base_color">#FF0D47A2</color>
     <color name="data_text_color">#FFE7E4DA</color>
+    <color name="accent_red">#FFD50000</color>
     <color name="oldtext">#FF00FF00</color>
     <color name="oldtext_backg">#FF00B20D</color>
     <color name="transparent_color">#68E7E4DA</color>

@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.firestore.ktx.toObjects
 import com.google.firebase.ktx.Firebase
 import com.jufaja.inyedashares.models.DataFund
@@ -21,7 +20,6 @@ import kotlinx.android.synthetic.main.activity_refresh_data.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.tasks.await
-import java.util.*
 
 private const val TAG = "RefreshDataActivity"
 class RefreshDataActivity : AppCompatActivity() {
@@ -45,29 +43,29 @@ class RefreshDataActivity : AppCompatActivity() {
     lateinit var tvautotalgrowa: TextView
     lateinit var tvavmultiperca: TextView
     lateinit var tvawtotalperca: TextView
-    lateinit var tvacpartyfunda: TextView
+    lateinit var tvreservea0: TextView
     lateinit var tvadpartygrowa: TextView
     lateinit var tvaepartyperca: TextView
+
+    lateinit var tvinlayaold: TextView
+    lateinit var tvtotalfundaold: TextView
+    lateinit var tvamountaxyzold: TextView
 
     lateinit var clipboardManager: ClipboardManager
     private lateinit var firestoreDb: FirebaseFirestore
     private val datafundsCollectionRef = Firebase.firestore.collection("datafunds")
     private lateinit var datafundz: MutableList<DataFund>
     private lateinit var adapterDataFund: DataFundsAdapter
-    private lateinit var olddataa: MutableList<DataFund>
-    private lateinit var adapterOldData: AOldDataAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_refresh_data)
-        firstAToRecyclerView()
-        oldDataDystrybutor(1, "inlay", R.id.tvinlayold, "valuez", R.id.tvvalueaold,
-            "partyfundz", R.id.tvamountaxyzold, "totalfundz", R.id.tvtotalfundaold,
+        dataToRecyclerView(1)
+        oldDataDystrybutor(1, "inlay", R.id.tvinlayaold, "valuez", R.id.tvvalueaold,
+            "partysz", R.id.tvamountaxyzold, "totalfundz", R.id.tvtotalfundaold,
             "multigrowz", R.id.tvmultigrowaold, "totalgrowz", R.id.tvtotalgrowaold,
             "multipercz", R.id.tvmultipercaold, "totalpercz", R.id.tvtotalpercaold,
             "partygrowz", R.id.tvpartygrowaold, "partypercz", R.id.tvpartypercaold)
-
-        //secAToRecyclerView()
 
         tvfundnamea = findViewById(R.id.tvfundnamea)
         etfundnamechange = findViewById(R.id.etfundnamechangea)
@@ -83,12 +81,16 @@ class RefreshDataActivity : AppCompatActivity() {
         tvamountay = findViewById(R.id.tvamountay)
         tvamountaz = findViewById(R.id.tvamountaz)
 
+        tvinlayaold = findViewById(R.id.tvinlayaold)
+        tvtotalfundaold = findViewById(R.id.tvtotalfundaold)
+        tvamountaxyzold = findViewById(R.id.tvamountaxyzold)
+
         tvastotalfunda = findViewById(R.id.tvastotalfunda)
         tvatmultigrowa = findViewById(R.id.tvatmultigrowa)
         tvautotalgrowa = findViewById(R.id.tvautotalgrowa)
         tvavmultiperca = findViewById(R.id.tvavmultiperca)
         tvawtotalperca = findViewById(R.id.tvawtotalperca)
-        tvacpartyfunda = findViewById(R.id.tvacpartyfunda)
+        tvreservea0 = findViewById(R.id.tvreservea0)
         tvadpartygrowa = findViewById(R.id.tvadpartygrowa)
         tvaepartyperca = findViewById(R.id.tvaepartyperca)
 
@@ -97,17 +99,25 @@ class RefreshDataActivity : AppCompatActivity() {
                 swcalculatinga.text = resources.getString(R.string.clicker_Calculate)
                 swcalculatinga.setTextColor(resources.getColor(R.color.oldtext))
 
-                calculateAmA(etfundnamechange, tvfundnamea, "Name is")
-                calculateAmA(etvaluea, tvvaluea, "Value is")
-                calculateAmA(etinlaya, tvinlaya, "Inlay is")
-                calculateAmA(etamountax, tvamountax, "Amount partys can't be")
-                calculateAmA(etamountay, tvamountay, "Amount partys can't be")
-                calculateAmA(etamountaz, tvamountaz, "Amount partys can't be")
+                editToText(etfundnamechange, tvfundnamea)
+                editToText(etvaluea, tvvaluea)
+                editToText(etinlaya, tvinlaya)
+                editToTextWithToast(etamountax, tvamountax, "Amount partys can't be")
+                editToTextWithToast(etamountay, tvamountay, "Amount partys can't be")
+                editToTextWithToast(etamountaz, tvamountaz, "Amount partys can't be")
 
                 sumXYZ(tvamountax, tvamountay, tvamountaz, tvamountaxyz)
-                wrapToFbase(tvfundnamea, tvvaluea, tvamountaxyz, tvinlaya)
+                wrapToFbase(tvfundnamea, tvvaluea, tvamountaxyz, tvinlaya, tvastotalfunda,
+                    tvatmultigrowa, tvautotalgrowa, tvavmultiperca, tvawtotalperca, tvaepartyperca,
+                    tvadpartygrowa)
 
-                caluTotalValueFundA(tvvaluea, tvamountaxyz, tvastotalfunda)
+                caluMultiply(tvvaluea, tvamountaxyz, tvastotalfunda)
+                caluSubtract(tvastotalfunda, tvtotalfundaold, tvatmultigrowa, "%.2f")
+                caluSubtract(tvastotalfunda, tvinlayaold, tvautotalgrowa, "%.2f")
+                caluPercentage(tvatmultigrowa, tvtotalfundaold, tvavmultiperca)
+                caluPercentage(tvautotalgrowa, tvinlayaold, tvawtotalperca)
+                caluSubtract(tvamountaxyz, tvamountaxyzold, tvadpartygrowa, "%.4f")
+                caluPercentage(tvadpartygrowa, tvamountaxyz, tvaepartyperca)
 
                 btnfirebasea.setTextColor(resources.getColor(R.color.oldtext))
             } else {
@@ -122,35 +132,52 @@ class RefreshDataActivity : AppCompatActivity() {
                 tvamountaz.text = ""
 
                 tvastotalfunda.text = ""
+                tvatmultigrowa.text = ""
+                tvautotalgrowa.text = ""
+                tvavmultiperca.text = ""
+                tvawtotalperca.text = ""
+                tvadpartygrowa.text = ""
+                tvaepartyperca.text = ""
 
                 btnfirebasea.setTextColor(resources.getColor(R.color.transparent_color))
-                //btnfirebasea.isEnabled = false
                 Toast.makeText(this, "Data cleared", Toast.LENGTH_SHORT).show()
             }
             btnfirebasea.setOnClickListener {
-                switchData(1, wrapToFbase(tvfundnamea, tvvaluea, tvinlaya, tvamountaxyz))
-                //caluTest123()
+                switchData(1, wrapToFbase(tvfundnamea, tvvaluea, tvinlaya, tvamountaxyz,
+                    tvastotalfunda, tvatmultigrowa, tvautotalgrowa, tvavmultiperca, tvawtotalperca,
+                    tvaepartyperca, tvadpartygrowa))
+                //caluPercentage(tvadpartygrowa, tvamountaxyz, tvaepartyperca)
             }
         }
-        btntest123.setOnClickListener {
-            /*oldDataDystrybutor(1, "inlay", R.id.tvinlayold, "valuez", R.id.tvvalueaold,
-                "partyfundz", R.id.tvamountaxyzold, "totalfundz", R.id.tvtotalfundaold,
-                "multigrowz", R.id.tvmultigrowaold, "totalgrowz", R.id.tvtotalgrowaold,
-                "multipercz", R.id.tvmultipercaold, "totalpercz", R.id.tvtotalpercaold,
-                "partygrowz", R.id.tvpartygrowaold, "partypercz", R.id.tvpartypercaold)
-         */}
+        swbeta01.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked) {
+                swbeta01.text = resources.getString(R.string.clicker_beta)
+                swbeta01.setTextColor(resources.getColor(R.color.accent_red))
+
+                //caluPercentage(tvadpartygrowa, tvamountaxyz, tvaepartyperca)
+
+                Toast.makeText(this, "Beta Action ON", Toast.LENGTH_SHORT).show()
+            } else {
+                swbeta01.text = resources.getString(R.string.clicker_De_beta)
+                swbeta01.setTextColor(resources.getColor(R.color.transparent_color))
+
+
+
+                Toast.makeText(this, "Beta Action OFF", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
     @SuppressLint("NotifyDataSetChanged")
-    private fun firstAToRecyclerView() {
+    private fun dataToRecyclerView(fundno: Int) {
         datafundz = mutableListOf()
         adapterDataFund = DataFundsAdapter(this, datafundz)
-        rvdatafunds.adapter = adapterDataFund
-        rvdatafunds.layoutManager = LinearLayoutManager(this)
+        rvdatafundsa.adapter = adapterDataFund
+        rvdatafundsa.layoutManager = LinearLayoutManager(this)
 
         firestoreDb = FirebaseFirestore.getInstance()
         val datafundsReference = firestoreDb
             .collection("datafunds")
-            .whereEqualTo("numberz", 1)
+            .whereEqualTo("numberz", fundno)
             //.limit(1)
         datafundsReference.addSnapshotListener { snapshot, exepction ->
             if (exepction != null || snapshot == null) {
@@ -163,29 +190,6 @@ class RefreshDataActivity : AppCompatActivity() {
             adapterDataFund.notifyDataSetChanged()
         }
     }
-    /*@SuppressLint("NotifyDataSetChanged")
-    private fun secAToRecyclerView() {
-        olddataa = mutableListOf()
-        adapterOldData = AOldDataAdapter(this, datafundz)
-        rvolddataa.adapter = adapterOldData
-        rvolddataa.layoutManager = LinearLayoutManager(this)
-
-        firestoreDb = FirebaseFirestore.getInstance()
-        val datafundsReference = firestoreDb
-            .collection("datafunds")
-            .whereEqualTo("numberz", 1)
-            //.limit(1)
-        datafundsReference.addSnapshotListener { snapshot, exepction ->
-            if (exepction != null || snapshot == null) {
-                Log.e(TAG, "exeption when qeurying datafunds")
-                return@addSnapshotListener
-            }
-            val dataFundsList = snapshot.toObjects<DataFund>()
-            olddataa.clear()
-            olddataa.addAll(dataFundsList)
-            adapterOldData.notifyDataSetChanged()
-        }
-    }*/
     private fun sumXYZ(amountx: TextView, amounty: TextView, amountz: TextView, amountXYZ: TextView)
                         : Map<String, Any> {
         val amountax = amountx.text.toString()
@@ -227,11 +231,21 @@ class RefreshDataActivity : AppCompatActivity() {
         }
             return wrapXYZ
     }
-    private fun wrapToFbase(nameF: TextView, valueF: TextView, inlayF: TextView, aXYZ: TextView): Map<String, Any> {
-        val namea = nameF.text.toString();
-        val valuea = valueF.text.toString()
-        val inlay = inlayF.text.toString()
-        val amountaxyz = aXYZ.text.toString()
+    private fun wrapToFbase(nameP: TextView, valueP: TextView, inlayP: TextView, amountP: TextView,
+                            totalfundPO: TextView, multigrowPO: TextView, totalgrowPO: TextView,
+                            multipercPO: TextView, totalpercPO: TextView, partypercPO: TextView,
+                            partygrowPO: TextView): Map<String, Any> {
+        val namea = nameP.text.toString();
+        val valuea = valueP.text.toString()
+        val inlay = inlayP.text.toString()
+        val amountaxyz = amountP.text.toString()
+        val totalfund = totalfundPO.text.toString()
+        val multigrow = multigrowPO.text.toString();
+        val totalgrow = totalgrowPO.text.toString()
+        val multiperc = multipercPO.text.toString()
+        val totalperc = totalpercPO.text.toString()
+        val partyperc = partypercPO.text.toString()
+        val partygrow = partygrowPO.text.toString()
         val wrapToFBase = mutableMapOf<String, Any>()
         if (namea.isNotEmpty()) {
             wrapToFBase["namez"] = namea
@@ -245,21 +259,56 @@ class RefreshDataActivity : AppCompatActivity() {
         if (inlay.isNotEmpty()) {
             wrapToFBase["inlay"] = inlay
         }
-        for (entertedInFields in wrapToFBase) {
-            Log.i(TAG, "entry--> $entertedInFields")
+        if (totalfund.isNotEmpty()) {
+            wrapToFBase["totalfundz"] = totalfund
         }
+        if (multigrow.isNotEmpty()) {
+            wrapToFBase["multigrowz"] = multigrow
+        }
+        if (totalgrow.isNotEmpty()) {
+            wrapToFBase["totalgrowz"] = totalgrow
+        }
+        if (multiperc.isNotEmpty()) {
+            wrapToFBase["multipercz"] = multiperc
+        }
+        if (totalperc.isNotEmpty()) {
+            wrapToFBase["totalpercz"] = totalperc
+        }
+        if (partyperc.isNotEmpty()) {
+            wrapToFBase["partypercz"] = partyperc
+        }
+        if (partygrow.isNotEmpty()) {
+            wrapToFBase["partygrowz"] = partyperc
+        }
+        //for (entertedInFields in wrapToFBase) {
+        //    Log.i(TAG, "entry--> $entertedInFields")
+        //}
             return wrapToFBase
     }
-    private fun calculateAmA(editText: EditText, textView: TextView, toost1: String)  {
-        val aMa = editText.text.toString()
+    private fun editToText(editinput: EditText, textinput: TextView)  {
+        val aMa = editinput.text.toString()
         if (aMa.isNotEmpty()) {
             clipboardManager = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
             val clipDataOne = ClipData.newPlainText("key", aMa)
             clipboardManager.setPrimaryClip(clipDataOne)
             val clipDataSec: ClipData = clipboardManager.primaryClip!!
             val itemOne: ClipData.Item = clipDataSec.getItemAt(0)
-            textView.text = itemOne.text.toString()
+            textinput.text = itemOne.text.toString()
         } else {
+            Log.i(TAG, "#\n$editinput= (INVALID)*\n$textinput = (INVALID)*")
+        }
+    }
+    private fun editToTextWithToast(editinput: EditText, textinput: TextView, toost1: String)  {
+        val aMa = editinput.text.toString()
+        if (aMa.isNotEmpty()) {
+            clipboardManager = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+            val clipDataOne = ClipData.newPlainText("key", aMa)
+            clipboardManager.setPrimaryClip(clipDataOne)
+            val clipDataSec: ClipData = clipboardManager.primaryClip!!
+            val itemOne: ClipData.Item = clipDataSec.getItemAt(0)
+            textinput.text = itemOne.text.toString()
+        } else {
+            Log.i(TAG, "#\n$editinput= (INVALID)*\n$textinput = (INVALID)*")
             Toast.makeText(this, "$toost1 empty", Toast.LENGTH_SHORT
             ).show()
         }
@@ -291,15 +340,15 @@ class RefreshDataActivity : AppCompatActivity() {
             }
         }
     }
-    private fun caluTotalValueFundA(Y: TextView, Z: TextView, YZ: TextView): Map<String, Any> {
-        val value = Y.text.toString()
-        val totalpartys = Z.text.toString()
+    private fun caluMultiply(Y: TextView, Z: TextView, YZ: TextView): Map<String, Any> {
+        val dataY = Y.text.toString()
+        val dataZ = Z.text.toString()
         val caluMap = mutableMapOf<String, Any>()
-        if (value.isNotEmpty()) {
-            caluMap["Y"] = value
+        if (dataY.isNotEmpty()) {
+            caluMap["Y"] = dataY
         }
-        if (totalpartys.isNotEmpty()) {
-            caluMap["Z"] = totalpartys
+        if (dataZ.isNotEmpty()) {
+            caluMap["Z"] = dataZ
         }
         val keyY: String? = caluMap["Y"] as String?
         val keyZ: String? = caluMap["Z"] as String?
@@ -310,32 +359,64 @@ class RefreshDataActivity : AppCompatActivity() {
                 val kapFactorize = "%.2f".format(kap)
                 YZ.text = kapFactorize
             } else {
-                Toast.makeText(this, "Total value NOT Calculated", Toast.LENGTH_LONG
-                ).show()
+                Log.i (TAG, "#\n$Z MultiplyZ= $dataZ(INVALID)")
             }
         } else {
-            Toast.makeText(
-                this, "Total value NOT Calculated", Toast.LENGTH_LONG).show()
+            Log.i (TAG, "#\n$Y MultiplyY= $dataY(INVALID)")
         }
             return caluMap
         }
-    private fun caluTest123() = CoroutineScope(IO).launch {
-        try {
-            val datafundQuery = datafundsCollectionRef.get().await()
-            val sb = StringBuilder()
-            for (datafund in datafundQuery.documents) {
-                val datafunix = datafund.toObject<DataFund>()
-                sb.append("$datafunix\n")
-                //Log.i(TAG, "$datafunix\n")
-            }
-            withContext(Dispatchers.Main) {
-             tvtest123.text = sb.toString()
-            }
-        } catch(e: Exception) {
-            withContext(Dispatchers.Main)  {
-                Toast.makeText(this@RefreshDataActivity, e.message, Toast.LENGTH_SHORT).show()
-            }
+    private fun caluSubtract(Y: TextView, Z: TextView, YZ: TextView, factor: String): Map<String, Any> {
+        val dataY = Y.text.toString()
+        val dataZ = Z.text.toString()
+        val caluMap = mutableMapOf<String, Any>()
+        if (dataY.isNotEmpty()) {
+            caluMap["Y"] = dataY
         }
+        if (dataZ.isNotEmpty()) {
+            caluMap["Z"] = dataZ
+        }
+        val keyY: String? = caluMap["Y"] as String?
+        val keyZ: String? = caluMap["Z"] as String?
+
+        if (keyY != null) {
+            if (keyZ != null) {
+                val kap = (keyY.toDouble() - keyZ.toDouble())
+                val kapFactorize = factor.format(kap)
+                YZ.text = kapFactorize
+            } else {
+                Log.i (TAG, "#\n$Z SubtractZ= $dataZ(INVALID)")
+            }
+        } else {
+            Log.i (TAG, "#\n$Y SubtractY= $dataY(INVALID)")
+        }
+        return caluMap
+    }
+    private fun caluPercentage(Y: TextView, Z: TextView, YZ: TextView): Map<String, Any> {
+        val dataY = Y.text.toString()
+        val dataZ = Z.text.toString()
+        val caluMap = mutableMapOf<String, Any>()
+        if (dataY.isNotEmpty()) {
+            caluMap["Y"] = dataY
+        }
+        if (dataZ.isNotEmpty()) {
+            caluMap["Z"] = dataZ
+        }
+        val keyY: String? = caluMap["Y"] as String?
+        val keyZ: String? = caluMap["Z"] as String?
+
+        if (keyY != null) {
+            if (keyZ != null) {
+                val kap = (keyY.toDouble() / keyZ.toDouble() * 100)
+                val kapFactorize = "%.2f".format(kap)
+                YZ.text = kapFactorize
+            } else {
+                Log.i (TAG, "#\n$Z PercentageZ= $dataZ(INVALID)")
+            }
+        } else {
+            Log.i (TAG, "#\n$Y PercentageY= $dataY(INVALID)")
+        }
+        return caluMap
     }
     private fun oldDataDystrybutor(number: Int,
                                    DraadA: String, TvA: Any,
@@ -381,14 +462,25 @@ class RefreshDataActivity : AppCompatActivity() {
                                 partyGrow.text = document.getString(DraadI)
                                 partyPerc.text = document.getString(DraadJ)
                             } else {
-                                Log.i(TAG, "-1-NON DATA")
+                                Toast.makeText(
+                                    this@RefreshDataActivity,
+                                    "Error: No Data", Toast.LENGTH_SHORT
+                                ).show()
                             }
                         }
                         .addOnFailureListener {
-                            Log.i(TAG, "-1-Fetching Failure")
+                            Toast.makeText(
+                                this@RefreshDataActivity,
+                                "Error: Fetching failure", Toast.LENGTH_SHORT
+                            ).show()
                         }
                 } catch (e: Exception) {
-                    Log.i(TAG, "-1-ERROR Fetching DATA")
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(
+                            this@RefreshDataActivity, e.message, Toast.LENGTH_LONG
+                        ).show()
+                        Log.i(TAG, "-1-ERROR Fetching DATA")
+                    }
                 }
             }
         }

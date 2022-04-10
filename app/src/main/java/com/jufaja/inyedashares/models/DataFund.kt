@@ -11,7 +11,7 @@ data class DataFund (
     var totalgrowz: String = "",
     var multipercz: String = "",
     var totalpercz: String = "",
-    var partyfundz: String = "",
     var partygrowz: String = "",
-    var partypercz: String = ""
+    var partypercz: String = "",
+    var partyfundz: String = ""
         )
