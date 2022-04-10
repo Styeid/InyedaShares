@@ -18,12 +18,6 @@ import com.google.firebase.ktx.Firebase
 import com.jufaja.inyedashares.models.DataPost
 import com.jufaja.inyedashares.models.User
 import kotlinx.android.synthetic.main.activity_data_list.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
-import kotlinx.coroutines.withContext
 
 private const val TAG = "HomeActivity"
 private  const val EXTRA_USERNAME = "EXTRA_USERNAME"
@@ -93,7 +87,7 @@ open class HomeActivity : AppCompatActivity() {
             }
         }
         fabupdatascreen.setOnClickListener {
-            val intent = Intent(this, RefreshDataActivity::class.java)
+            val intent = Intent(this, ARefreshDataActivity::class.java)
             Log.i(TAG, "Info. go to Update Data screen")
             Toast.makeText(this, "Update Screen", Toast.LENGTH_LONG).show()
             startActivity(intent)

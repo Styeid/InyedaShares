@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InyedaShares">
         <activity
-            android:name=".RefreshDataActivity"
-            android:theme="@style/Theme.AppCompat.Translucent"
+            android:name=".ARefreshDataActivity"
             android:exported="false"
-            android:screenOrientation="sensorLandscape" />
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.AppCompat.Translucent" />
         <activity
             android:name=".TriFollowUpActivity"
             android:exported="false"

@@ -30,9 +30,9 @@
     <string name="title_row_percentagetotal">% Total</string>
     <string name="fundnamea">P0fundname</string>
     <string name="afpartyvaluea">afpartyvalue</string>
-    <string name="amountax">P0amountx</string >
-    <string name="amountay">P0amounty</string >
-    <string name="amountaz">P0amountz</string >
+    <string name="amountax">P0amountx</string>
+    <string name="amountay">P0amounty</string>
+    <string name="amountaz">P0amountz</string>
     <string name="amountaxyz">P0amountxyz</string>
     <string name="astotalfunda">astotalfund</string>
     <string name="atmultigrowa">atmultigrow</string>
