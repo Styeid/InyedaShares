@@ -9,6 +9,7 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.graphics.red
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
@@ -52,6 +53,20 @@ open class ARefreshDataActivity : AppCompatActivity() {
     lateinit var etamountbx: EditText
     lateinit var etamountby: EditText
     lateinit var etamountbz: EditText
+    //C//
+    lateinit var tvfundnamec: TextView
+    lateinit var etfundnamechangec: EditText
+    lateinit var tvvaluec: TextView
+    lateinit var etvaluec: EditText
+    lateinit var tvinlayc: TextView
+    lateinit var etinlayc: EditText
+    lateinit var tvamountcxyz: TextView
+    lateinit var tvamountcx: TextView
+    lateinit var tvamountcy: TextView
+    lateinit var tvamountcz: TextView
+    lateinit var etamountcx: EditText
+    lateinit var etamountcy: EditText
+    lateinit var etamountcz: EditText
     //A//
     lateinit var tvastotalfunda: TextView
     lateinit var tvatmultigrowa: TextView
@@ -70,6 +85,15 @@ open class ARefreshDataActivity : AppCompatActivity() {
     lateinit var tvadpartygrowb: TextView
     lateinit var tvaepartypercb: TextView
     lateinit var tvreserveb0: TextView
+    //C//
+    lateinit var tvastotalfundc: TextView
+    lateinit var tvatmultigrowc: TextView
+    lateinit var tvautotalgrowc: TextView
+    lateinit var tvavmultipercc: TextView
+    lateinit var tvawtotalpercc: TextView
+    lateinit var tvadpartygrowc: TextView
+    lateinit var tvaepartypercc: TextView
+    lateinit var tvreservec0: TextView
     //A//
     lateinit var tvinlayaold: TextView
     lateinit var tvtotalfundaold: TextView
@@ -78,6 +102,10 @@ open class ARefreshDataActivity : AppCompatActivity() {
     lateinit var tvinlaybold: TextView
     lateinit var tvtotalfundbold: TextView
     lateinit var tvamountbxyzold: TextView
+    //C//
+    lateinit var tvinlaycold: TextView
+    lateinit var tvtotalfundcold: TextView
+    lateinit var tvamountcxyzold: TextView
 
     open lateinit var clipboardManager: ClipboardManager
     private lateinit var firestoreDb: FirebaseFirestore
@@ -88,6 +116,9 @@ open class ARefreshDataActivity : AppCompatActivity() {
     //B//
     private lateinit var datafundy: MutableList<DataFund>
     private lateinit var adapterDataFundy: YDataFundAdapter
+    //C//
+    private lateinit var datafundx: MutableList<DataFund>
+    private lateinit var adapterDataFundx: XDataFundAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,18 +127,20 @@ open class ARefreshDataActivity : AppCompatActivity() {
         dataToRecyclerViewZ(rvdatafundsa, 1 )
         //B//
         dataToRecyclerViewY(rvdatafundsb, 2)
+        //C//
+        dataToRecyclerViewX(rvdatafundsc, 3)
         //A//
-        oldDataDystrybutor(1, "inlay", R.id.tvinlayaold, "valuez", R.id.tvvalueaold,
-            "partysz", R.id.tvamountaxyzold, "totalfundz", R.id.tvtotalfundaold,
-            "multigrowz", R.id.tvmultigrowaold, "totalgrowz", R.id.tvtotalgrowaold,
-            "multipercz", R.id.tvmultipercaold, "totalpercz", R.id.tvtotalpercaold,
-            "partygrowz", R.id.tvpartygrowaold, "partypercz", R.id.tvpartypercaold)
+        oldDataDystrybutor(1, R.id.tvinlayaold, R.id.tvvalueaold, R.id.tvamountaxyzold,
+            R.id.tvtotalfundaold, R.id.tvmultigrowaold, R.id.tvtotalgrowaold, R.id.tvmultipercaold,
+            R.id.tvtotalpercaold, R.id.tvpartygrowaold, R.id.tvpartypercaold)
         //B//
-        oldDataDystrybutor(2, "inlay", R.id.tvinlaybold, "valuez", R.id.tvvaluebold,
-            "partysz", R.id.tvamountbxyzold, "totalfundz", R.id.tvtotalfundbold,
-            "multigrowz", R.id.tvmultigrowbold, "totalgrowz", R.id.tvtotalgrowbold,
-            "multipercz", R.id.tvmultipercbold, "totalpercz", R.id.tvtotalpercbold,
-            "partygrowz", R.id.tvpartygrowbold, "partypercz", R.id.tvpartypercbold)
+        oldDataDystrybutor(2, R.id.tvinlaybold, R.id.tvvaluebold, R.id.tvamountbxyzold,
+            R.id.tvtotalfundbold, R.id.tvmultigrowbold, R.id.tvtotalgrowbold, R.id.tvmultipercbold,
+            R.id.tvtotalpercbold, R.id.tvpartygrowbold, R.id.tvpartypercbold)
+        //C//
+        oldDataDystrybutor(3, R.id.tvinlaycold, R.id.tvvaluecold, R.id.tvamountcxyzold,
+            R.id.tvtotalfundcold, R.id.tvmultigrowcold, R.id.tvtotalgrowcold, R.id.tvmultiperccold,
+            R.id.tvtotalperccold, R.id.tvpartygrowcold, R.id.tvpartyperccold)
         //A//
         tvfundnamea = findViewById(R.id.tvfundnamea)
         etfundnamechangea = findViewById(R.id.etfundnamechangea)
@@ -136,6 +169,20 @@ open class ARefreshDataActivity : AppCompatActivity() {
         tvamountbx = findViewById(R.id.tvamountbx)
         tvamountby = findViewById(R.id.tvamountby)
         tvamountbz = findViewById(R.id.tvamountbz)
+        //C//
+        tvfundnamec = findViewById(R.id.tvfundnamec)
+        etfundnamechangec = findViewById(R.id.etfundnamechangec)
+        tvvaluec = findViewById(R.id.tvvaluec)
+        etvaluec = findViewById(R.id.etvaluec)
+        tvinlayc = findViewById(R.id.tvinlayc)
+        etinlayc = findViewById(R.id.etinlayc)
+        tvamountcxyz = findViewById(R.id.tvamountcxyz)
+        etamountcx = findViewById(R.id.etamountcx)
+        etamountcy = findViewById(R.id.etamountcy)
+        etamountcz = findViewById(R.id.etamountcz)
+        tvamountcx = findViewById(R.id.tvamountcx)
+        tvamountcy = findViewById(R.id.tvamountcy)
+        tvamountcz = findViewById(R.id.tvamountcz)
         //A//
         tvinlayaold = findViewById(R.id.tvinlayaold)
         tvtotalfundaold = findViewById(R.id.tvtotalfundaold)
@@ -144,6 +191,10 @@ open class ARefreshDataActivity : AppCompatActivity() {
         tvinlaybold = findViewById(R.id.tvinlaybold)
         tvtotalfundbold = findViewById(R.id.tvtotalfundbold)
         tvamountbxyzold = findViewById(R.id.tvamountbxyzold)
+        //C//
+        tvinlaycold = findViewById(R.id.tvinlaycold)
+        tvtotalfundcold = findViewById(R.id.tvtotalfundcold)
+        tvamountcxyzold = findViewById(R.id.tvamountcxyzold)
         //A//
         tvastotalfunda = findViewById(R.id.tvastotalfunda)
         tvatmultigrowa = findViewById(R.id.tvatmultigrowa)
@@ -162,6 +213,15 @@ open class ARefreshDataActivity : AppCompatActivity() {
         tvadpartygrowb = findViewById(R.id.tvadpartygrowb)
         tvaepartypercb = findViewById(R.id.tvaepartypercb)
         tvreserveb0 = findViewById(R.id.tvreserveb0)
+        //C//
+        tvastotalfundc = findViewById(R.id.tvastotalfundc)
+        tvatmultigrowc = findViewById(R.id.tvatmultigrowc)
+        tvautotalgrowc = findViewById(R.id.tvautotalgrowc)
+        tvavmultipercc = findViewById(R.id.tvavmultipercc)
+        tvawtotalpercc = findViewById(R.id.tvawtotalpercc)
+        tvadpartygrowc = findViewById(R.id.tvadpartygrowc)
+        tvaepartypercc = findViewById(R.id.tvaepartypercc)
+        tvreservec0 = findViewById(R.id.tvreservec0)
         //A//
         swcalculatinga.setOnCheckedChangeListener { compoundButton, isChecked ->
             if (isChecked) {
@@ -175,7 +235,7 @@ open class ARefreshDataActivity : AppCompatActivity() {
                 editToTextWithToast(etamountay, tvamountay)
                 editToTextWithToast(etamountaz, tvamountaz)
 
-                sumXYZ(tvamountax, tvamountay, tvamountaz, tvamountaxyz)
+                sumXYZ(tvamountax, tvamountay, tvamountaz, tvamountaxyz, tvamountaxyzold)
                 wrapToFbase(tvfundnamea, tvvaluea, tvamountaxyz, tvinlaya, tvastotalfunda,
                     tvatmultigrowa, tvautotalgrowa, tvavmultiperca, tvawtotalperca, tvaepartyperca,
                     tvadpartygrowa)
@@ -231,7 +291,7 @@ open class ARefreshDataActivity : AppCompatActivity() {
                 editToTextWithToast(etamountby, tvamountby)
                 editToTextWithToast(etamountbz, tvamountbz)
 
-                sumXYZ(tvamountbx, tvamountby, tvamountbz, tvamountbxyz)
+                sumXYZ(tvamountbx, tvamountby, tvamountbz, tvamountbxyz, tvamountbxyzold)
                 wrapToFbase(tvfundnameb, tvvalueb, tvamountbxyz, tvinlayb, tvastotalfundb,
                     tvatmultigrowb, tvautotalgrowb, tvavmultipercb, tvawtotalpercb, tvaepartypercb,
                     tvadpartygrowb)
@@ -272,6 +332,62 @@ open class ARefreshDataActivity : AppCompatActivity() {
                 switchData(2, wrapToFbase(tvfundnameb, tvvalueb, tvinlayb, tvamountbxyz,
                     tvastotalfundb, tvatmultigrowb, tvautotalgrowb, tvavmultipercb, tvawtotalpercb,
                     tvaepartypercb, tvadpartygrowb))
+            }
+        }
+        //C//
+        swcalculatingc.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked) {
+                swcalculatingc.text = resources.getString(R.string.clicker_Calculate)
+                swcalculatingc.setTextColor(resources.getColor(R.color.oldtext))
+
+                editToText(etfundnamechangec, tvfundnamec)
+                editToText(etvaluec, tvvaluec)
+                editToText(etinlayc, tvinlayc)
+                editToTextWithToast(etamountcx, tvamountcx)
+                editToTextWithToast(etamountcy, tvamountcy)
+                editToTextWithToast(etamountcz, tvamountcz)
+
+                sumXYZ(tvamountcx, tvamountcy, tvamountcz, tvamountcxyz, tvamountcxyzold)
+                wrapToFbase(tvfundnamec, tvvaluec, tvamountcxyz, tvinlayc, tvastotalfundc,
+                    tvatmultigrowc, tvautotalgrowc, tvavmultipercc, tvawtotalpercc, tvaepartypercc,
+                    tvadpartygrowc)
+
+                caluMultiply(tvvaluec, tvamountcxyz, tvastotalfundc)
+                caluSubtract(tvastotalfundc, tvtotalfundcold, tvatmultigrowc, "%.2f")
+                caluSubtract(tvastotalfundc, tvinlaycold, tvautotalgrowc, "%.2f")
+                caluPercentage(tvatmultigrowc, tvtotalfundcold, tvavmultipercc)
+                caluPercentage(tvautotalgrowc, tvinlaycold, tvawtotalpercc)
+                caluSubtract(tvamountcxyz, tvamountcxyzold, tvadpartygrowc, "%.4f")
+                caluPercentage(tvadpartygrowc, tvamountcxyz, tvaepartypercc)
+
+                btnfirebasec.setTextColor(resources.getColor(R.color.oldtext))
+            } else {
+                swcalculatingc.text = resources.getString(R.string.clicker_De_Calculate)
+                swcalculatingc.setTextColor(resources.getColor(R.color.transparent_color))
+                tvfundnamec.text = ""
+                tvvaluec.text = ""
+                tvinlayc.text = ""
+                tvamountcxyz.text = ""
+                tvamountcx.text = ""
+                tvamountcy.text = ""
+                tvamountcz.text = ""
+
+                tvastotalfundc.text = ""
+                tvatmultigrowc.text = ""
+                tvautotalgrowc.text = ""
+                tvavmultipercc.text = ""
+                tvawtotalpercc.text = ""
+                tvadpartygrowc.text = ""
+                tvaepartypercc.text = ""
+
+                btnfirebasec.setTextColor(resources.getColor(R.color.transparent_color))
+                Toast.makeText(this, "Data cleared", Toast.LENGTH_SHORT).show()
+            }
+            //B//
+            btnfirebasec.setOnClickListener {
+                switchData(3, wrapToFbase(tvfundnamec, tvvaluec, tvinlayc, tvamountcxyz,
+                    tvastotalfundc, tvatmultigrowc, tvautotalgrowc, tvavmultipercc, tvawtotalpercc,
+                    tvaepartypercc, tvadpartygrowc))
             }
         }
         swbeta01.setOnCheckedChangeListener { compoundButton, isChecked ->
@@ -338,8 +454,31 @@ open class ARefreshDataActivity : AppCompatActivity() {
             adapterDataFundy.notifyDataSetChanged()
         }
     }
-    private fun sumXYZ(amountx: TextView, amounty: TextView, amountz: TextView, amountXYZ: TextView)
-                        : Map<String, Any> {
+    @SuppressLint("NotifyDataSetChanged")
+    private fun dataToRecyclerViewX(rvxXx: RecyclerView, fundno: Int) {
+        datafundx = mutableListOf()
+        adapterDataFundx = XDataFundAdapter(this, datafundx)
+        rvdatafundsc.adapter = adapterDataFundx
+        rvdatafundsc.layoutManager = LinearLayoutManager(this)
+
+        firestoreDb = FirebaseFirestore.getInstance()
+        val datafundsReference = firestoreDb
+            .collection("datafunds")
+            .whereEqualTo("numberz", fundno)
+        //.limit(1)
+        datafundsReference.addSnapshotListener { snapshot, exepction ->
+            if (exepction != null || snapshot == null) {
+                Log.e(TAG, "exeption when qeurying datafunds")
+                return@addSnapshotListener
+            }
+            val dataFundsList = snapshot.toObjects<DataFund>()
+            datafundx.clear()
+            datafundx.addAll(dataFundsList)
+            adapterDataFundx.notifyDataSetChanged()
+        }
+    }
+    private fun sumXYZ(amountx: TextView, amounty: TextView, amountz: TextView, amountXYZO: TextView,
+                       amountXYZI: TextView): Map<String, Any> {
         val amountax = amountx.text.toString()
         val amountay = amounty.text.toString()
         val amountaz = amountz.text.toString();
@@ -359,20 +498,17 @@ open class ARefreshDataActivity : AppCompatActivity() {
         if (somX != null) {
             if (somY != null) {
                 if (somZ != null) {
-                    val somXYZ = (somX.toDouble() + somY.toDouble() + somZ.toDouble())
-                    val somFactorize = "%.4f".format(somXYZ)
-                    amountXYZ.text = somFactorize
+                    val somXYZO = (somX.toDouble() + somY.toDouble() + somZ.toDouble())
+                    val somFactorizeO = "%.4f".format(somXYZO)
+                    amountXYZO.text = somFactorizeO
                 } else {
-                    Toast.makeText(this, "Use 0 for replacement", Toast.LENGTH_LONG
-                    ).show()
+                    amountXYZO.text = amountXYZI.text
                 }
             } else {
-                Toast.makeText(
-                    this, "Use 0 for replacement", Toast.LENGTH_LONG).show()
+                amountXYZO.text = amountXYZI.text
             }
         } else {
-            Toast.makeText(
-                this, "Use 0 for replacement", Toast.LENGTH_LONG).show()
+            amountXYZO.text = amountXYZI.text
         //}
         //for (entertedInFields in wrapXYZ) {
         //    Log.i(TAG, "entry--> $entertedInFields")
@@ -456,8 +592,9 @@ open class ARefreshDataActivity : AppCompatActivity() {
                 textinput.text = itemOne.text.toString()
         } else {
             Log.i(TAG, "#\n$editinput= (INVALID)*\n$textinput = (INVALID)*")
-                Toast.makeText(this@ARefreshDataActivity, "Amount partys can't be empty",
-                    Toast.LENGTH_SHORT).show() }
+                Toast.makeText(this@ARefreshDataActivity, "WARNING: When using amount fields," +
+                        "\tremaining amount fields can't be empty.\n\t\t\t\tUse zero (0) as default for " +
+                        "remaining amount fields.", Toast.LENGTH_SHORT).show() }
     }
     private fun switchData(number: Int, dataChange: Map<String, Any>) = CoroutineScope(IO).launch {
         val dataFundZQuery = datafundsCollectionRef
@@ -486,30 +623,29 @@ open class ARefreshDataActivity : AppCompatActivity() {
             }
         }
     }
-    private fun caluMultiply(Y: TextView, Z: TextView, YZ: TextView): Map<String, Any> {
+    private fun caluMultiply(X: TextView, Y: TextView, YZ: TextView): Map<String, Any> {
+        val dataX = X.text.toString()
         val dataY = Y.text.toString()
-        val dataZ = Z.text.toString()
         val caluMap = mutableMapOf<String, Any>()
+        if (dataX.isNotEmpty()) {
+            caluMap["X"] = dataX
+        }
         if (dataY.isNotEmpty()) {
             caluMap["Y"] = dataY
         }
-        if (dataZ.isNotEmpty()) {
-            caluMap["Z"] = dataZ
-        }
+        val keyX: String? = caluMap["X"] as String?
         val keyY: String? = caluMap["Y"] as String?
-        val keyZ: String? = caluMap["Z"] as String?
-
-        if (keyY != null) {
-            if (keyZ != null) {
-                val kap = (keyY.toDouble() * keyZ.toDouble())
-                val kapFactorize = "%.2f".format(kap)
-                YZ.text = kapFactorize
+        if (keyX != null) {
+            if (keyY != null) {
+                val kapO = (keyX.toDouble() * keyY.toDouble())
+                val kapFactorizeO = "%.2f".format(kapO)
+                YZ.text = kapFactorizeO
             } else {
-                Log.i (TAG, "#\n$Z MultiplyZ= $dataZ(INVALID)")
-            }
+                Log.i (TAG, "#\n$Y MultiplyY= $dataY(INVALID)")
+                }
         } else {
-            Log.i (TAG, "#\n$Y MultiplyY= $dataY(INVALID)")
-        }
+            Log.i (TAG, "#\n$Y MultiplyX= $dataX(INVALID)")
+            }
             return caluMap
         }
     private fun caluSubtract(Y: TextView, Z: TextView, YZ: TextView, factor: String): Map<String, Any> {
@@ -564,18 +700,8 @@ open class ARefreshDataActivity : AppCompatActivity() {
         }
         return caluMap
     }
-    private fun oldDataDystrybutor(number: Int,
-                                   DraadA: String, TvA: Any,
-                                   DraadB: String, TvB: Any,
-                                   DraadC: String, TvC: Any,
-                                   DraadD: String, TvD: Any,
-                                   DraadE: String, TvE: Any,
-                                   DraadF: String, TvF: Any,
-                                   DraadG: String, TvG: Any,
-                                   DraadH: String, TvH: Any,
-                                   DraadI: String, TvI: Any,
-                                   DraadJ: String, TvJ: Any)
-    = CoroutineScope(IO).launch {
+    private fun oldDataDystrybutor(number: Int, TvA: Any, TvB: Any, TvC: Any, TvD: Any, TvE: Any, TvF: Any,
+                                   TvG: Any, TvH: Any, TvI: Any, TvJ: Any) = CoroutineScope(IO).launch {
         val dataQuer1 = datafundsCollectionRef
             .whereEqualTo("numberz", number)
             .get()
@@ -597,27 +723,27 @@ open class ARefreshDataActivity : AppCompatActivity() {
                     dataBlok1.get()
                         .addOnSuccessListener { document ->
                             if (document != null) {
-                                inlayValue.text = document.getString(DraadA)
-                                partyValue.text = document.getString(DraadB)
-                                partyFund.text = document.getString(DraadC)
-                                totalFund.text = document.getString(DraadD)
-                                multiGrow.text = document.getString(DraadE)
-                                totalGrow.text = document.getString(DraadF)
-                                multiPerc.text = document.getString(DraadG)
-                                totalPerc.text = document.getString(DraadH)
-                                partyGrow.text = document.getString(DraadI)
-                                partyPerc.text = document.getString(DraadJ)
+                                inlayValue.text = document.getString("inlay")
+                                partyValue.text = document.getString("valuez")
+                                partyFund.text = document.getString("partysz")
+                                totalFund.text = document.getString("totalfundz")
+                                multiGrow.text = document.getString("multigrowz")
+                                totalGrow.text = document.getString("totalgrowz")
+                                multiPerc.text = document.getString("multipercz")
+                                totalPerc.text = document.getString("totalpercz")
+                                partyGrow.text = document.getString("partygrowz")
+                                partyPerc.text = document.getString("partypercz")
                             } else {
                                 Toast.makeText(
                                     this@ARefreshDataActivity,
-                                    "Error: No Data", Toast.LENGTH_SHORT
+                                    "-1-Error: No Data", Toast.LENGTH_SHORT
                                 ).show()
                             }
                         }
                         .addOnFailureListener {
                             Toast.makeText(
                                 this@ARefreshDataActivity,
-                                "Error: Fetching failure", Toast.LENGTH_SHORT
+                                "-2-Error: Fetching failure", Toast.LENGTH_SHORT
                             ).show()
                         }
                 } catch (e: Exception) {
@@ -625,7 +751,7 @@ open class ARefreshDataActivity : AppCompatActivity() {
                         Toast.makeText(
                             this@ARefreshDataActivity, e.message, Toast.LENGTH_LONG
                         ).show()
-                        Log.i(TAG, "-1-ERROR Fetching DATA")
+                        Log.i(TAG, "-3-Error: Fetching DATA")
                     }
                 }
             }
