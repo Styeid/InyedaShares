@@ -67,6 +67,20 @@ open class ARefreshDataActivity : AppCompatActivity() {
     lateinit var etamountcx: EditText
     lateinit var etamountcy: EditText
     lateinit var etamountcz: EditText
+    //D//
+    lateinit var tvfundnamed: TextView
+    lateinit var etfundnamechanged: EditText
+    lateinit var tvvalued: TextView
+    lateinit var etvalued: EditText
+    lateinit var tvinlayd: TextView
+    lateinit var etinlayd: EditText
+    lateinit var tvamountdxyz: TextView
+    lateinit var tvamountdx: TextView
+    lateinit var tvamountdy: TextView
+    lateinit var tvamountdz: TextView
+    lateinit var etamountdx: EditText
+    lateinit var etamountdy: EditText
+    lateinit var etamountdz: EditText
     //A//
     lateinit var tvastotalfunda: TextView
     lateinit var tvatmultigrowa: TextView
@@ -94,6 +108,15 @@ open class ARefreshDataActivity : AppCompatActivity() {
     lateinit var tvadpartygrowc: TextView
     lateinit var tvaepartypercc: TextView
     lateinit var tvreservec0: TextView
+    //D//
+    lateinit var tvastotalfundd: TextView
+    lateinit var tvatmultigrowd: TextView
+    lateinit var tvautotalgrowd: TextView
+    lateinit var tvavmultipercd: TextView
+    lateinit var tvawtotalpercd: TextView
+    lateinit var tvadpartygrowd: TextView
+    lateinit var tvaepartypercd: TextView
+    lateinit var tvreserved0: TextView
     //A//
     lateinit var tvinlayaold: TextView
     lateinit var tvtotalfundaold: TextView
@@ -106,6 +129,10 @@ open class ARefreshDataActivity : AppCompatActivity() {
     lateinit var tvinlaycold: TextView
     lateinit var tvtotalfundcold: TextView
     lateinit var tvamountcxyzold: TextView
+    //D//
+    lateinit var tvinlaydold: TextView
+    lateinit var tvtotalfunddold: TextView
+    lateinit var tvamountdxyzold: TextView
 
     open lateinit var clipboardManager: ClipboardManager
     private lateinit var firestoreDb: FirebaseFirestore
@@ -119,6 +146,9 @@ open class ARefreshDataActivity : AppCompatActivity() {
     //C//
     private lateinit var datafundx: MutableList<DataFund>
     private lateinit var adapterDataFundx: XDataFundAdapter
+    //D//
+    private lateinit var datafundw: MutableList<DataFund>
+    private lateinit var adapterDataFundw: WDataFundAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -129,6 +159,9 @@ open class ARefreshDataActivity : AppCompatActivity() {
         dataToRecyclerViewY(rvdatafundsb, 2)
         //C//
         dataToRecyclerViewX(rvdatafundsc, 3)
+        //D//
+        dataToRecyclerViewW(rvdatafundsd, 4)
+
         //A//
         oldDataDystrybutor(1, R.id.tvinlayaold, R.id.tvvalueaold, R.id.tvamountaxyzold,
             R.id.tvtotalfundaold, R.id.tvmultigrowaold, R.id.tvtotalgrowaold, R.id.tvmultipercaold,
@@ -141,6 +174,11 @@ open class ARefreshDataActivity : AppCompatActivity() {
         oldDataDystrybutor(3, R.id.tvinlaycold, R.id.tvvaluecold, R.id.tvamountcxyzold,
             R.id.tvtotalfundcold, R.id.tvmultigrowcold, R.id.tvtotalgrowcold, R.id.tvmultiperccold,
             R.id.tvtotalperccold, R.id.tvpartygrowcold, R.id.tvpartyperccold)
+        //D//
+        oldDataDystrybutor(4, R.id.tvinlaydold, R.id.tvvaluedold, R.id.tvamountdxyzold,
+            R.id.tvtotalfunddold, R.id.tvmultigrowdold, R.id.tvtotalgrowdold, R.id.tvmultipercdold,
+            R.id.tvtotalpercdold, R.id.tvpartygrowdold, R.id.tvpartypercdold)
+
         //A//
         tvfundnamea = findViewById(R.id.tvfundnamea)
         etfundnamechangea = findViewById(R.id.etfundnamechangea)
@@ -183,6 +221,21 @@ open class ARefreshDataActivity : AppCompatActivity() {
         tvamountcx = findViewById(R.id.tvamountcx)
         tvamountcy = findViewById(R.id.tvamountcy)
         tvamountcz = findViewById(R.id.tvamountcz)
+        //D//
+        tvfundnamed = findViewById(R.id.tvfundnamed)
+        etfundnamechanged = findViewById(R.id.etfundnamechanged)
+        tvvalued = findViewById(R.id.tvvalued)
+        etvalued = findViewById(R.id.etvalued)
+        tvinlayd = findViewById(R.id.tvinlayd)
+        etinlayd = findViewById(R.id.etinlayd)
+        tvamountdxyz = findViewById(R.id.tvamountdxyz)
+        etamountdx = findViewById(R.id.etamountdx)
+        etamountdy = findViewById(R.id.etamountdy)
+        etamountdz = findViewById(R.id.etamountdz)
+        tvamountdx = findViewById(R.id.tvamountdx)
+        tvamountdy = findViewById(R.id.tvamountdy)
+        tvamountdz = findViewById(R.id.tvamountdz)
+
         //A//
         tvinlayaold = findViewById(R.id.tvinlayaold)
         tvtotalfundaold = findViewById(R.id.tvtotalfundaold)
@@ -195,6 +248,11 @@ open class ARefreshDataActivity : AppCompatActivity() {
         tvinlaycold = findViewById(R.id.tvinlaycold)
         tvtotalfundcold = findViewById(R.id.tvtotalfundcold)
         tvamountcxyzold = findViewById(R.id.tvamountcxyzold)
+        //D//
+        tvinlaydold = findViewById(R.id.tvinlaydold)
+        tvtotalfunddold = findViewById(R.id.tvtotalfunddold)
+        tvamountdxyzold = findViewById(R.id.tvamountdxyzold)
+
         //A//
         tvastotalfunda = findViewById(R.id.tvastotalfunda)
         tvatmultigrowa = findViewById(R.id.tvatmultigrowa)
@@ -222,6 +280,16 @@ open class ARefreshDataActivity : AppCompatActivity() {
         tvadpartygrowc = findViewById(R.id.tvadpartygrowc)
         tvaepartypercc = findViewById(R.id.tvaepartypercc)
         tvreservec0 = findViewById(R.id.tvreservec0)
+        //D//
+        tvastotalfundd = findViewById(R.id.tvastotalfundd)
+        tvatmultigrowd = findViewById(R.id.tvatmultigrowd)
+        tvautotalgrowd = findViewById(R.id.tvautotalgrowd)
+        tvavmultipercd = findViewById(R.id.tvavmultipercd)
+        tvawtotalpercd = findViewById(R.id.tvawtotalpercd)
+        tvadpartygrowd = findViewById(R.id.tvadpartygrowd)
+        tvaepartypercd = findViewById(R.id.tvaepartypercd)
+        tvreserved0 = findViewById(R.id.tvreserved0)
+
         //A//
         swcalculatinga.setOnCheckedChangeListener { compoundButton, isChecked ->
             if (isChecked) {
@@ -390,6 +458,63 @@ open class ARefreshDataActivity : AppCompatActivity() {
                     tvaepartypercc, tvadpartygrowc))
             }
         }
+        //D//
+        swcalculatingd.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked) {
+                swcalculatingd.text = resources.getString(R.string.clicker_Calculate)
+                swcalculatingd.setTextColor(resources.getColor(R.color.oldtext))
+
+                editToText(etfundnamechanged, tvfundnamed)
+                editToText(etvalued, tvvalued)
+                editToText(etinlayd, tvinlayd)
+                editToTextWithToast(etamountdx, tvamountdx)
+                editToTextWithToast(etamountdy, tvamountdy)
+                editToTextWithToast(etamountdz, tvamountdz)
+
+                sumXYZ(tvamountdx, tvamountdy, tvamountdz, tvamountdxyz, tvamountdxyzold)
+                wrapToFbase(tvfundnamed, tvvalued, tvamountdxyz, tvinlayd, tvastotalfundd,
+                    tvatmultigrowd, tvautotalgrowd, tvavmultipercd, tvawtotalpercd, tvaepartypercd,
+                    tvadpartygrowd)
+
+                caluMultiply(tvvalued, tvamountdxyz, tvastotalfundd)
+                caluSubtract(tvastotalfundd, tvtotalfunddold, tvatmultigrowd, "%.2f")
+                caluSubtract(tvastotalfundd, tvinlaydold, tvautotalgrowd, "%.2f")
+                caluPercentage(tvatmultigrowd, tvtotalfunddold, tvavmultipercd)
+                caluPercentage(tvautotalgrowd, tvinlaydold, tvawtotalpercd)
+                caluSubtract(tvamountdxyz, tvamountdxyzold, tvadpartygrowd, "%.4f")
+                caluPercentage(tvadpartygrowd, tvamountdxyz, tvaepartypercd)
+
+                btnfirebased.setTextColor(resources.getColor(R.color.oldtext))
+            } else {
+                swcalculatingd.text = resources.getString(R.string.clicker_De_Calculate)
+                swcalculatingd.setTextColor(resources.getColor(R.color.transparent_color))
+                tvfundnamed.text = ""
+                tvvalued.text = ""
+                tvinlayd.text = ""
+                tvamountdxyz.text = ""
+                tvamountdx.text = ""
+                tvamountdy.text = ""
+                tvamountdz.text = ""
+
+                tvastotalfundd.text = ""
+                tvatmultigrowd.text = ""
+                tvautotalgrowd.text = ""
+                tvavmultipercd.text = ""
+                tvawtotalpercd.text = ""
+                tvadpartygrowd.text = ""
+                tvaepartypercd.text = ""
+
+                btnfirebased.setTextColor(resources.getColor(R.color.transparent_color))
+                Toast.makeText(this, "Data cleared", Toast.LENGTH_SHORT).show()
+            }
+            //B//
+            btnfirebased.setOnClickListener {
+                switchData(4, wrapToFbase(tvfundnamed, tvvalued, tvinlayd, tvamountdxyz,
+                    tvastotalfundd, tvatmultigrowd, tvautotalgrowd, tvavmultipercd, tvawtotalpercd,
+                    tvaepartypercd, tvadpartygrowd))
+            }
+        }
+
         swbeta01.setOnCheckedChangeListener { compoundButton, isChecked ->
             if (isChecked) {
                 swbeta01.text = resources.getString(R.string.clicker_beta)
@@ -475,6 +600,29 @@ open class ARefreshDataActivity : AppCompatActivity() {
             datafundx.clear()
             datafundx.addAll(dataFundsList)
             adapterDataFundx.notifyDataSetChanged()
+        }
+    }
+    @SuppressLint("NotifyDataSetChanged")
+    private fun dataToRecyclerViewW(rvxXx: RecyclerView, fundno: Int) {
+        datafundw = mutableListOf()
+        adapterDataFundw = WDataFundAdapter(this, datafundw)
+        rvdatafundsd.adapter = adapterDataFundw
+        rvdatafundsd.layoutManager = LinearLayoutManager(this)
+
+        firestoreDb = FirebaseFirestore.getInstance()
+        val datafundsReference = firestoreDb
+            .collection("datafunds")
+            .whereEqualTo("numberz", fundno)
+        //.limit(1)
+        datafundsReference.addSnapshotListener { snapshot, exepction ->
+            if (exepction != null || snapshot == null) {
+                Log.e(TAG, "exeption when qeurying datafunds")
+                return@addSnapshotListener
+            }
+            val dataFundsList = snapshot.toObjects<DataFund>()
+            datafundw.clear()
+            datafundw.addAll(dataFundsList)
+            adapterDataFundw.notifyDataSetChanged()
         }
     }
     private fun sumXYZ(amountx: TextView, amounty: TextView, amountz: TextView, amountXYZO: TextView,

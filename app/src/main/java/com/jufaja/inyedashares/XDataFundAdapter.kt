@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jufaja.inyedashares.models.DataFund
 import kotlinx.android.synthetic.main.item_datafundx.view.*
 
-
 class XDataFundAdapter (val context: Context, val datafundx: List<DataFund>) :
     RecyclerView.Adapter<XDataFundAdapter.ViewHolder>() {
 
