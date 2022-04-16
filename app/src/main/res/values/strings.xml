@@ -10,6 +10,9 @@
     <string name="fill_data_fundvalue">Value</string>
     <string name="fill_data_inlay">Inlay</string>
 
+    <string name="fill_unit_spac">\t \t</string>
+    <string name="fill_unit_resv">\t*\t</string>
+    <string name="fill_unit_perc">\t%\t</string>
     <string name="fill_data_reserve">\t****\t</string>
     <string name="fill_data_reserve2">servee</string>
     <!--string name="fill_data_amount">Cancel</string -->
@@ -23,6 +26,8 @@
     <string name="clicker_view_data">View</string>
     <string name="title_row_user">User</string>
     <string name="title_row_date">Date</string>
+    <string name="fundnameold">OLfundname</string>
+    <string name="title_row_totalvalueold">TotalValueOld</string>
     <string name="title_row_totalvalue">TotalValue</string>
     <string name="title_row_profitday">Profit/day</string>
     <string name="title_row_profittotal">ProfitTotal</string>
