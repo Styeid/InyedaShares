@@ -2659,7 +2659,7 @@
 
             <TextView
                 android:id="@+id/tvdatet"
-                android:layout_width="150dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="1dp"
                 android:background="@color/transparent_backcolor"
@@ -2981,6 +2981,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:clickable="false"
         android:fontFamily="@font/audiowide"
         android:text="@string/clicker_De_beta"
         android:textAlignment="center"

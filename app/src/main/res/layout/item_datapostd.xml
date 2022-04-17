@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="27dp"
-    android:layout_margin="3dp"
     android:background="#031014"
     android:orientation="horizontal"
     app:cardBackgroundColor="#031014">
@@ -17,7 +15,7 @@
 
         <TextView
             android:id="@+id/tvdaa"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -31,21 +29,21 @@
 
         <TextView
             android:id="@+id/tvdab"
-            android:layout_width="wrap_content"
+            android:layout_width="69dp"
             android:layout_height="wrap_content"
-            android:layout_margin="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
             android:layout_weight="1"
             android:background="#137898"
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#E7E4DA"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textSize="14sp"
             tools:text="datum" />
 
         <TextView
             android:id="@+id/tvdac"
-            android:layout_width="wrap_content"
+            android:layout_width="79dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -59,35 +57,35 @@
 
         <TextView
             android:id="@+id/tvdad"
-            android:layout_width="wrap_content"
+            android:layout_width="79dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1EA6C0"
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
-            android:textColor="#E7E4DA"
+            android:textColor="@color/transparent_backcolor"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:text="multig" />
 
         <TextView
             android:id="@+id/tvdae"
-            android:layout_width="wrap_content"
+            android:layout_width="49dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#5CBBC8"
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
-            android:textColor="#E7E4DA"
+            android:textColor="@color/transparent_backcolor"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:text="totalg" />
 
         <TextView
             android:id="@+id/tvdaf"
-            android:layout_width="wrap_content"
+            android:layout_width="49dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -101,7 +99,7 @@
 
         <TextView
             android:id="@+id/tvdag"
-            android:layout_width="wrap_content"
+            android:layout_width="79dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -115,35 +113,35 @@
 
         <TextView
             android:id="@+id/tvdah"
-            android:layout_width="wrap_content"
+            android:layout_width="79dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1EA6C0"
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
-            android:textColor="#E7E4DA"
+            android:textColor="@color/transparent_backcolor"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:text="multig" />
 
         <TextView
             android:id="@+id/tvdai"
-            android:layout_width="wrap_content"
+            android:layout_width="49dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#5CBBC8"
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
-            android:textColor="#E7E4DA"
+            android:textColor="@color/transparent_backcolor"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:text="totalg" />
 
         <TextView
             android:id="@+id/tvdaj"
-            android:layout_width="wrap_content"
+            android:layout_width="49dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -157,7 +155,7 @@
 
         <TextView
             android:id="@+id/tvdak"
-            android:layout_width="wrap_content"
+            android:layout_width="79dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -171,35 +169,35 @@
 
         <TextView
             android:id="@+id/tvdal"
-            android:layout_width="wrap_content"
+            android:layout_width="79dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1EA6C0"
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
-            android:textColor="#E7E4DA"
+            android:textColor="@color/transparent_backcolor"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:text="multig" />
 
         <TextView
             android:id="@+id/tvdam"
-            android:layout_width="wrap_content"
+            android:layout_width="49dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#5CBBC8"
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
-            android:textColor="#E7E4DA"
+            android:textColor="@color/transparent_backcolor"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:text="totalg" />
 
         <TextView
             android:id="@+id/tvdan"
-            android:layout_width="wrap_content"
+            android:layout_width="49dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -213,7 +211,7 @@
 
         <TextView
             android:id="@+id/tvdao"
-            android:layout_width="wrap_content"
+            android:layout_width="79dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -227,35 +225,35 @@
 
         <TextView
             android:id="@+id/tvdap"
-            android:layout_width="wrap_content"
+            android:layout_width="79dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1EA6C0"
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
-            android:textColor="#E7E4DA"
+            android:textColor="@color/transparent_backcolor"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:text="multig" />
 
         <TextView
             android:id="@+id/tvdaq"
-            android:layout_width="wrap_content"
+            android:layout_width="49dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#5CBBC8"
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
-            android:textColor="#E7E4DA"
+            android:textColor="@color/transparent_backcolor"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:text="totalg" />
 
         <TextView
             android:id="@+id/tvdar"
-            android:layout_width="wrap_content"
+            android:layout_width="49dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"

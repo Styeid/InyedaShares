@@ -3,12 +3,12 @@ package com.jufaja.inyedashares
 import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -20,9 +20,12 @@ import com.google.firebase.ktx.Firebase
 import com.jufaja.inyedashares.models.DataFund
 import com.jufaja.inyedashares.models.User
 import kotlinx.android.synthetic.main.activity_refresh_data.*
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -372,6 +375,8 @@ open class ARefreshDataActivity : AppCompatActivity() {
         //A//
         swcalculatinga.setOnCheckedChangeListener { compoundButton, isChecked ->
             if (isChecked) {
+                swbeta01.isClickable = true
+                btnfirebasea.isEnabled = true
                 swcalculatinga.text = resources.getString(R.string.clicker_Calculate)
                 swcalculatinga.setTextColor(resources.getColor(R.color.oldtext))
 
@@ -398,6 +403,10 @@ open class ARefreshDataActivity : AppCompatActivity() {
                 wrapTotalBlok()
                 btnfirebasea.setTextColor(resources.getColor(R.color.oldtext))
             } else {
+                swbeta01.isClickable = false
+                swbeta01.isChecked = false
+                btnfirebaset.isEnabled = false
+                btnfirebasea.isEnabled = false
                 swcalculatinga.text = resources.getString(R.string.clicker_De_Calculate)
                 swcalculatinga.setTextColor(resources.getColor(R.color.transparent_color))
                 tvfundnamea.text = ""
@@ -421,14 +430,18 @@ open class ARefreshDataActivity : AppCompatActivity() {
             }
             //A//
             btnfirebasea.setOnClickListener {
+                btnfirebasea.setTextColor(resources.getColor(R.color.transparent_dark))
                 switchData(1, wrapToFbase(tvfundnamea, tvvaluea, tvinlaya, tvamountaxyz,
                     tvastotalfunda, tvatmultigrowa, tvautotalgrowa, tvavmultiperca, tvawtotalperca,
                     tvaepartyperca, tvadpartygrowa))
+                btnfirebasea.isEnabled = false
             }
         }
         //B//
         swcalculatingb.setOnCheckedChangeListener { compoundButton, isChecked ->
             if (isChecked) {
+                swbeta01.isClickable = true
+                btnfirebaseb.isEnabled = true
                 swcalculatingb.text = resources.getString(R.string.clicker_Calculate)
                 swcalculatingb.setTextColor(resources.getColor(R.color.oldtext))
 
@@ -455,6 +468,10 @@ open class ARefreshDataActivity : AppCompatActivity() {
                 wrapTotalBlok()
                 btnfirebaseb.setTextColor(resources.getColor(R.color.oldtext))
             } else {
+                swbeta01.isClickable = false
+                swbeta01.isChecked = false
+                btnfirebaset.isEnabled = false
+                btnfirebaseb.isEnabled = false
                 swcalculatingb.text = resources.getString(R.string.clicker_De_Calculate)
                 swcalculatingb.setTextColor(resources.getColor(R.color.transparent_color))
                 tvfundnameb.text = ""
@@ -478,14 +495,18 @@ open class ARefreshDataActivity : AppCompatActivity() {
             }
             //B//
             btnfirebaseb.setOnClickListener {
+                btnfirebaseb.setTextColor(resources.getColor(R.color.transparent_dark))
                 switchData(2, wrapToFbase(tvfundnameb, tvvalueb, tvinlayb, tvamountbxyz,
                     tvastotalfundb, tvatmultigrowb, tvautotalgrowb, tvavmultipercb, tvawtotalpercb,
                     tvaepartypercb, tvadpartygrowb))
+                btnfirebaseb.isEnabled = false
             }
         }
         //C//
         swcalculatingc.setOnCheckedChangeListener { compoundButton, isChecked ->
             if (isChecked) {
+                swbeta01.isClickable = true
+                btnfirebasec.isEnabled = true
                 swcalculatingc.text = resources.getString(R.string.clicker_Calculate)
                 swcalculatingc.setTextColor(resources.getColor(R.color.oldtext))
 
@@ -512,6 +533,10 @@ open class ARefreshDataActivity : AppCompatActivity() {
                 wrapTotalBlok()
                 btnfirebasec.setTextColor(resources.getColor(R.color.oldtext))
             } else {
+                swbeta01.isClickable = false
+                swbeta01.isChecked = false
+                btnfirebaset.isEnabled = false
+                btnfirebasec.isEnabled = false
                 swcalculatingc.text = resources.getString(R.string.clicker_De_Calculate)
                 swcalculatingc.setTextColor(resources.getColor(R.color.transparent_color))
                 tvfundnamec.text = ""
@@ -535,14 +560,18 @@ open class ARefreshDataActivity : AppCompatActivity() {
             }
             //C//
             btnfirebasec.setOnClickListener {
+                btnfirebasec.setTextColor(resources.getColor(R.color.transparent_dark))
                 switchData(3, wrapToFbase(tvfundnamec, tvvaluec, tvinlayc, tvamountcxyz,
                     tvastotalfundc, tvatmultigrowc, tvautotalgrowc, tvavmultipercc, tvawtotalpercc,
                     tvaepartypercc, tvadpartygrowc))
+                btnfirebasec.isEnabled = false
             }
         }
         //D//
         swcalculatingd.setOnCheckedChangeListener { compoundButton, isChecked ->
             if (isChecked) {
+                swbeta01.isClickable = true
+                btnfirebased.isEnabled = true
                 swcalculatingd.text = resources.getString(R.string.clicker_Calculate)
                 swcalculatingd.setTextColor(resources.getColor(R.color.oldtext))
 
@@ -569,6 +598,10 @@ open class ARefreshDataActivity : AppCompatActivity() {
                 wrapTotalBlok()
                 btnfirebased.setTextColor(resources.getColor(R.color.oldtext))
             } else {
+                swbeta01.isClickable = false
+                swbeta01.isChecked = false
+                btnfirebaset.isEnabled = false
+                btnfirebased.isEnabled = false
                 swcalculatingd.text = resources.getString(R.string.clicker_De_Calculate)
                 swcalculatingd.setTextColor(resources.getColor(R.color.transparent_color))
                 tvfundnamed.text = ""
@@ -592,9 +625,11 @@ open class ARefreshDataActivity : AppCompatActivity() {
             }
             //D//
             btnfirebased.setOnClickListener {
+                btnfirebased.setTextColor(resources.getColor(R.color.transparent_dark))
                 switchData(4, wrapToFbase(tvfundnamed, tvvalued, tvinlayd, tvamountdxyz,
                     tvastotalfundd, tvatmultigrowd, tvautotalgrowd, tvavmultipercd, tvawtotalpercd,
                     tvaepartypercd, tvadpartygrowd))
+                btnfirebased.isEnabled = false
             }
         }
         ///BTa///
@@ -604,7 +639,7 @@ open class ARefreshDataActivity : AppCompatActivity() {
                 swbeta01.setTextColor(resources.getColor(R.color.accent_red))
                 btnfirebaset.setTextColor(resources.getColor(R.color.oldtext))
 
-
+                keyValueDatapost()
 
                 Toast.makeText(this, "Beta Action ON", Toast.LENGTH_SHORT).show()
             } else {
@@ -616,7 +651,11 @@ open class ARefreshDataActivity : AppCompatActivity() {
 
                 Toast.makeText(this, "Beta Action OFF", Toast.LENGTH_SHORT).show()
             }
-            btnfirebaset.setOnClickListener {  }
+            btnfirebaset.setOnClickListener {
+                btnfirebaset.setTextColor(resources.getColor(R.color.transparent_dark))
+                saveDatapost(keyValueDatapost())
+                Toast.makeText(this, "Firebase BTN is clicked", Toast.LENGTH_LONG).show()
+            }
         }
     }
     @SuppressLint("NotifyDataSetChanged")
@@ -669,8 +708,8 @@ open class ARefreshDataActivity : AppCompatActivity() {
     private fun dataToRecyclerViewX(rvxXx: RecyclerView, fundno: Int) {
         datafundx = mutableListOf()
         adapterDataFundx = XDataFundAdapter(this, datafundx)
-        rvdatafundsc.adapter = adapterDataFundx
-        rvdatafundsc.layoutManager = LinearLayoutManager(this)
+        rvxXx.adapter = adapterDataFundx
+        rvxXx.layoutManager = LinearLayoutManager(this)
 
         firestoreDb = FirebaseFirestore.getInstance()
         val datafundsReference = firestoreDb
@@ -692,8 +731,8 @@ open class ARefreshDataActivity : AppCompatActivity() {
     private fun dataToRecyclerViewW(rvxXx: RecyclerView, fundno: Int) {
         datafundw = mutableListOf()
         adapterDataFundw = WDataFundAdapter(this, datafundw)
-        rvdatafundsd.adapter = adapterDataFundw
-        rvdatafundsd.layoutManager = LinearLayoutManager(this)
+        rvxXx.adapter = adapterDataFundw
+        rvxXx.layoutManager = LinearLayoutManager(this)
 
         firestoreDb = FirebaseFirestore.getInstance()
         val datafundsReference = firestoreDb
@@ -1022,11 +1061,12 @@ open class ARefreshDataActivity : AppCompatActivity() {
             }
     }
     @SuppressLint("SimpleDateFormat")
-    private fun setCurrentDateToTV() {
+    private fun setCurrentDateToTV(): String {
         val currentDay: TextView = this.findViewById(R.id.tvdatet)
-        val simpleDateFormat = SimpleDateFormat("dd.MM.yyyy")
-        val currentDate: String = simpleDateFormat.format(Date())
+        val dateConventional = SimpleDateFormat("dd.MM.yyyy h:mm a")
+        val currentDate: String = dateConventional.format(Date())
         currentDay.text = currentDate
+        return currentDate
     }
     private fun caluTotalInlay(): Map<String, Any> {
         val dataX1 = tvinlayaold.text.toString()
@@ -1345,8 +1385,7 @@ open class ARefreshDataActivity : AppCompatActivity() {
     }
     ////Creating_DataPost////
     private fun keyValueDatapost(): MutableMap<String, Any> {
-        val aauser = signedInUser?.username
-        val abdate = tvdatet.text.toString()
+        val abdate = System.currentTimeMillis()
         val acpartyfunda = tvamountaxyz.text.toString()
         val adpartygrowa = tvadpartygrowa.text.toString()
         val aepartyperca = tvaepartyperca.text.toString()
@@ -1426,18 +1465,9 @@ open class ARefreshDataActivity : AppCompatActivity() {
         val partygrowd = tvpartygrowdold.text.toString()
         val partypercd = tvpartypercdold.text.toString()
         val wrapDataPost = mutableMapOf<String, Any>()
-        if (aauser != null) {
-            if (aauser.isNotEmpty()) {
-                wrapDataPost["user"] = aauser
-            }
-        } else {
-            wrapDataPost["user"] = "UserName S.W.W"
-        }
-        if (abdate.isNotEmpty()) {
-            wrapDataPost["abdate"] = abdate
-        } else {
-            wrapDataPost["abdate"] = "Date S.W.W"
-        }
+        ///Wraping///
+        wrapDataPost["aauser"] = signedInUser!!
+        wrapDataPost["abdate"] = abdate
         if (acpartyfunda.isNotEmpty()) {
             wrapDataPost["acpartyfunda"] = acpartyfunda
         } else {
@@ -1471,7 +1501,7 @@ open class ARefreshDataActivity : AppCompatActivity() {
         if (aipartypercb.isNotEmpty()) {
             wrapDataPost["aipartypercb"] = aipartypercb
         } else {
-            wrapDataPost["aepartypercb"] = partypercb
+            wrapDataPost["aipartypercb"] = partypercb
         }
         if (ajpartyvalueb.isNotEmpty()) {
             wrapDataPost["ajpartyvalueb"] = ajpartyvalueb
@@ -1621,27 +1651,27 @@ open class ARefreshDataActivity : AppCompatActivity() {
         if (bmtotalabcd.isNotEmpty()) {
             wrapDataPost["bmtotalabcd"] = bmtotalabcd
         } else {
-            wrapDataPost["bmtotalabcd"] = "Totalvalue S.W.W"
+            wrapDataPost["bmtotalabcd"] = "No totalvalue"
         }
         if (bnmultiprofi.isNotEmpty()) {
             wrapDataPost["bnmultiprofi"] = bnmultiprofi
         } else {
-            wrapDataPost["bnmultiprofi"] = "ProfitDay S.W.W"
+            wrapDataPost["bnmultiprofi"] = "No profitday"
         }
         if (bototalprofi.isNotEmpty()) {
             wrapDataPost["bototalprofi"] = bototalprofi
         } else {
-            wrapDataPost["bototalprofi"] = "ProfitTotal S.W.W"
+            wrapDataPost["bototalprofi"] = "No profittotal"
         }
         if (bppercentagex.isNotEmpty()) {
             wrapDataPost["bppercentagex"] = bppercentagex
         } else {
-            wrapDataPost["bppercentagex"] = "% Daily S.W.W"
+            wrapDataPost["bppercentagex"] = "No % daily"
         }
         if (bqpercentagey.isNotEmpty()) {
             wrapDataPost["bqpercentagey"] = bqpercentagey
         } else {
-            wrapDataPost["bqpercentagey"] = "% Total S.W.W"
+            wrapDataPost["bqpercentagey"] = "No % total"
         }
         Log.i(TAG, "$wrapDataPost")
             return wrapDataPost

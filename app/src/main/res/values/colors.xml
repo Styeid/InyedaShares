@@ -20,4 +20,5 @@
     <color name="color_below_zero">#DC1E0B</color>
     <color name="color_above_zero">#33691E</color>
     <color name="color_equal_zero">#68E7E4DA</color>
+    <color name="color_yellow_zero">#FFF1CC50</color>
 </resources>

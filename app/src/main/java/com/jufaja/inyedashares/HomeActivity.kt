@@ -18,12 +18,13 @@ import com.google.firebase.ktx.Firebase
 import com.jufaja.inyedashares.models.DataPost
 import com.jufaja.inyedashares.models.User
 import kotlinx.android.synthetic.main.activity_data_list.*
+import kotlinx.android.synthetic.main.activity_refresh_data.*
 
 private const val TAG = "HomeActivity"
 private  const val EXTRA_USERNAME = "EXTRA_USERNAME"
 open class HomeActivity : AppCompatActivity() {
 
-    var dataPostLimit: Long = 20
+    var dataPostLimit: Long = 365
     var fieldOrderBy: String = "abdate"
     var signedInUser: User? = null
 

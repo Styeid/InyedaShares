@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="31dp"
-    android:layout_margin="3dp"
     android:background="#031014"
     android:orientation="horizontal"
     app:cardBackgroundColor="#031014">
@@ -16,7 +15,7 @@
 
         <TextView
             android:id="@+id/tvaaa"
-            android:layout_width="wrap_content"
+            android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -30,21 +29,20 @@
 
         <TextView
             android:id="@+id/tvaab"
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#137898"
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#E7E4DA"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             tools:text="datum" />
 
         <TextView
             android:id="@+id/tvabm"
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -58,7 +56,7 @@
 
         <TextView
             android:id="@+id/tvabn"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -72,7 +70,7 @@
 
         <TextView
             android:id="@+id/tvabo"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -86,7 +84,7 @@
 
         <TextView
             android:id="@+id/tvabp"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
@@ -100,7 +98,7 @@
 
         <TextView
             android:id="@+id/tvabq"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:layout_weight="1"
