@@ -156,23 +156,22 @@
                 android:backgroundTint="@color/transparent_backcolor"
                 android:fontFamily="@font/vt323"
                 android:text="@string/clicker_CopytoFirebase"
-                android:textColor="@color/transparent_dark"
+                android:textColor="@color/transparent_color"
                 android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
-            <Switch
-                android:id="@+id/swcalculatinga"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btncalculatinga"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/transparent_backcolor"
+                android:backgroundTint="@color/transparent_backcolor"
                 android:fontFamily="@font/vt323"
-                android:text="@string/clicker_De_Calculate"
-                android:textAlignment="center"
+                android:text="@string/clicker_Calculate"
                 android:textColor="@color/transparent_color"
-                android:textSize="16sp"
-                android:thumbTint="@color/oldtext"
-                android:trackTint="@color/oldtext_backg" />
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -193,7 +192,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/oldtext"
                 android:textColorHint="@color/oldtext_backg"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvreserve2"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/tvreserve2"
@@ -225,7 +224,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -242,7 +241,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -260,7 +259,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
@@ -277,7 +276,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -294,7 +293,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -311,7 +310,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -329,7 +328,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/astotalfunda" />
 
                 <TextView
@@ -343,7 +342,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/atmultigrowa" />
 
                 <TextView
@@ -357,7 +356,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/autotalgrowa" />
 
                 <TextView
@@ -371,7 +370,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/avmultiperca" />
 
                 <TextView
@@ -385,7 +384,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/awtotalperca" />
 
                 <TextView
@@ -399,7 +398,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/adpartygrowa" />
 
                 <TextView
@@ -413,7 +412,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/acpartyfunda" />
 
             </LinearLayout>
@@ -436,7 +435,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -454,7 +453,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -473,7 +472,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
@@ -491,7 +490,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -509,7 +508,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -527,7 +526,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -545,7 +544,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/astotalfunda" />
 
                 <TextView
@@ -559,7 +558,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/atmultigrowa" />
 
                 <TextView
@@ -573,7 +572,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/autotalgrowa" />
 
                 <TextView
@@ -587,7 +586,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/avmultiperca" />
 
                 <TextView
@@ -601,7 +600,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/awtotalperca" />
 
                 <TextView
@@ -615,7 +614,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/adpartygrowa" />
 
                 <TextView
@@ -629,7 +628,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/aepartyperca" />
 
             </LinearLayout>
@@ -809,23 +808,22 @@
                 android:backgroundTint="@color/transparent_backcolor"
                 android:fontFamily="@font/vt323"
                 android:text="@string/clicker_CopytoFirebase"
-                android:textColor="@color/transparent_dark"
+                android:textColor="@color/transparent_color"
                 android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
-            <Switch
-                android:id="@+id/swcalculatingb"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btncalculatingb"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/transparent_backcolor"
+                android:backgroundTint="@color/transparent_backcolor"
                 android:fontFamily="@font/vt323"
-                android:text="@string/clicker_De_Calculate"
-                android:textAlignment="center"
+                android:text="@string/clicker_Calculate"
                 android:textColor="@color/transparent_color"
-                android:textSize="16sp"
-                android:thumbTint="@color/oldtext"
-                android:trackTint="@color/oldtext_backg" />
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -846,7 +844,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/oldtext"
                 android:textColorHint="@color/oldtext_backg"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvreserve2"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/tvreserve2"
@@ -878,7 +876,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -895,7 +893,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -913,7 +911,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
@@ -930,7 +928,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -947,7 +945,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -964,7 +962,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -982,7 +980,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/astotalfunda" />
 
                 <TextView
@@ -996,7 +994,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/atmultigrowa" />
 
                 <TextView
@@ -1010,7 +1008,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/autotalgrowa" />
 
                 <TextView
@@ -1024,7 +1022,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/avmultiperca" />
 
                 <TextView
@@ -1038,7 +1036,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/awtotalperca" />
 
                 <TextView
@@ -1052,7 +1050,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/adpartygrowa" />
 
                 <TextView
@@ -1066,7 +1064,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/aepartyperca" />
 
             </LinearLayout>
@@ -1089,7 +1087,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -1107,7 +1105,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -1126,7 +1124,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
@@ -1144,7 +1142,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -1162,7 +1160,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -1180,7 +1178,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -1198,7 +1196,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/astotalfunda" />
 
                 <TextView
@@ -1212,7 +1210,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/atmultigrowa" />
 
                 <TextView
@@ -1226,7 +1224,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/autotalgrowa" />
 
                 <TextView
@@ -1240,7 +1238,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/avmultiperca" />
 
                 <TextView
@@ -1254,7 +1252,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/awtotalperca" />
 
                 <TextView
@@ -1268,7 +1266,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/adpartygrowa" />
 
                 <TextView
@@ -1282,7 +1280,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/aepartyperca" />
 
             </LinearLayout>
@@ -1462,23 +1460,22 @@
                 android:backgroundTint="@color/transparent_backcolor"
                 android:fontFamily="@font/vt323"
                 android:text="@string/clicker_CopytoFirebase"
-                android:textColor="@color/transparent_dark"
+                android:textColor="@color/transparent_color"
                 android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
-            <Switch
-                android:id="@+id/swcalculatingc"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btncalculatingc"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/transparent_backcolor"
+                android:backgroundTint="@color/transparent_backcolor"
                 android:fontFamily="@font/vt323"
-                android:text="@string/clicker_De_Calculate"
-                android:textAlignment="center"
+                android:text="@string/clicker_Calculate"
                 android:textColor="@color/transparent_color"
-                android:textSize="16sp"
-                android:thumbTint="@color/oldtext"
-                android:trackTint="@color/oldtext_backg" />
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -1499,7 +1496,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/oldtext"
                 android:textColorHint="@color/oldtext_backg"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvreserve2"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/tvreserve2"
@@ -1531,7 +1528,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -1548,7 +1545,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -1566,7 +1563,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
@@ -1583,7 +1580,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -1600,7 +1597,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -1617,7 +1614,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -1635,7 +1632,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/astotalfunda" />
 
                 <TextView
@@ -1649,7 +1646,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/atmultigrowa" />
 
                 <TextView
@@ -1663,7 +1660,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/autotalgrowa" />
 
                 <TextView
@@ -1677,7 +1674,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/avmultiperca" />
 
                 <TextView
@@ -1691,7 +1688,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/awtotalperca" />
 
                 <TextView
@@ -1705,7 +1702,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/adpartygrowa" />
 
                 <TextView
@@ -1719,7 +1716,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/aepartyperca" />
 
             </LinearLayout>
@@ -1742,7 +1739,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -1760,7 +1757,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -1779,7 +1776,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
@@ -1797,7 +1794,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -1815,7 +1812,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -1833,7 +1830,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -1851,7 +1848,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/astotalfunda" />
 
                 <TextView
@@ -1865,7 +1862,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/atmultigrowa" />
 
                 <TextView
@@ -1879,7 +1876,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/autotalgrowa" />
 
                 <TextView
@@ -1893,7 +1890,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/avmultiperca" />
 
                 <TextView
@@ -1907,7 +1904,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/awtotalperca" />
 
                 <TextView
@@ -1921,7 +1918,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/adpartygrowa" />
 
                 <TextView
@@ -1935,7 +1932,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/aepartyperca" />
 
             </LinearLayout>
@@ -2115,23 +2112,22 @@
                 android:backgroundTint="@color/transparent_backcolor"
                 android:fontFamily="@font/vt323"
                 android:text="@string/clicker_CopytoFirebase"
-                android:textColor="@color/transparent_dark"
+                android:textColor="@color/transparent_color"
                 android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
-            <Switch
-                android:id="@+id/swcalculatingd"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btncalculatingd"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/transparent_backcolor"
+                android:backgroundTint="@color/transparent_backcolor"
                 android:fontFamily="@font/vt323"
-                android:text="@string/clicker_De_Calculate"
-                android:textAlignment="center"
+                android:text="@string/clicker_Calculate"
                 android:textColor="@color/transparent_color"
-                android:textSize="16sp"
-                android:thumbTint="@color/oldtext"
-                android:trackTint="@color/oldtext_backg" />
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -2152,7 +2148,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/oldtext"
                 android:textColorHint="@color/oldtext_backg"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvreserve2"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/tvreserve2"
@@ -2184,7 +2180,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -2201,7 +2197,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -2219,7 +2215,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
@@ -2236,7 +2232,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -2253,7 +2249,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -2270,7 +2266,7 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/oldtext_backg"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -2288,7 +2284,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/astotalfunda" />
 
                 <TextView
@@ -2302,7 +2298,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/atmultigrowa" />
 
                 <TextView
@@ -2316,7 +2312,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/autotalgrowa" />
 
                 <TextView
@@ -2330,7 +2326,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/avmultiperca" />
 
                 <TextView
@@ -2344,7 +2340,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/awtotalperca" />
 
                 <TextView
@@ -2358,7 +2354,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/adpartygrowa" />
 
                 <TextView
@@ -2372,7 +2368,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/oldtext"
                     android:textColorHint="@color/transparent_color"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/aepartyperca" />
 
             </LinearLayout>
@@ -2395,7 +2391,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -2413,7 +2409,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvamountaxyz"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvamountaxyz"
@@ -2432,7 +2428,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvfundnamea"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvfundnamea"
@@ -2450,7 +2446,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -2468,7 +2464,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -2486,7 +2482,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/tvsavedate"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/tvsavedate"
@@ -2504,7 +2500,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/astotalfunda" />
 
                 <TextView
@@ -2518,7 +2514,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/atmultigrowa" />
 
                 <TextView
@@ -2532,7 +2528,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/autotalgrowa" />
 
                 <TextView
@@ -2546,7 +2542,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/avmultiperca" />
 
                 <TextView
@@ -2560,7 +2556,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/awtotalperca" />
 
                 <TextView
@@ -2574,7 +2570,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/adpartygrowa" />
 
                 <TextView
@@ -2588,7 +2584,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/transparent_dark"
                     android:textColorHint="@color/transparent_dark"
-                    android:textSize="20sp"
+                    android:textSize="10sp"
                     tools:text="@string/aepartyperca" />
 
             </LinearLayout>
@@ -2630,7 +2626,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/llabasisd"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024">
 
         <LinearLayout
             android:id="@+id/llt1"
@@ -2974,23 +2971,19 @@
             android:textColor="@color/transparent_dark"
             android:textSize="24sp"
             android:textStyle="bold|italic" />
-    </LinearLayout>
 
-    <Switch
-        android:id="@+id/swbeta01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:clickable="false"
-        android:fontFamily="@font/audiowide"
-        android:text="@string/clicker_De_beta"
-        android:textAlignment="center"
-        android:textColor="@color/color_equal_zero"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:thumbTint="@color/transparent_color"
-        android:trackTint="@color/color_equal_zero"
-        app:layout_constraintBottom_toTopOf="@+id/llabasist"
-        app:layout_constraintEnd_toEndOf="@+id/llabasist" />
+        <Button
+            android:id="@+id/btncalculatingt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/transparent_backcolor"
+            android:fontFamily="@font/vt323"
+            android:text="@string/clicker_DeLock"
+            android:textColor="@color/transparent_dark"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

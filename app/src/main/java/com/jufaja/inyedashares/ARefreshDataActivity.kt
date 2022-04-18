@@ -372,62 +372,37 @@ open class ARefreshDataActivity : AppCompatActivity() {
         tvpercentagetotalt = findViewById(R.id.tvpercentagetotalt)
         tvunitt7 = findViewById(R.id.tvunitt7)
         tvunitt8 = findViewById(R.id.tvunitt8)
+
+        btncalculatingt.isEnabled =false
         //A//
-        swcalculatinga.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked) {
-                swbeta01.isClickable = true
-                btnfirebasea.isEnabled = true
-                swcalculatinga.text = resources.getString(R.string.clicker_Calculate)
-                swcalculatinga.setTextColor(resources.getColor(R.color.oldtext))
+        btncalculatinga.setOnClickListener {
+            btncalculatingt.isEnabled = true
+            btnfirebasea.isEnabled = true
+            btncalculatinga.setTextColor(resources.getColor(R.color.oldtext))
 
-                editToText(etfundnamechangea, tvfundnamea)
-                editToText(etvaluea, tvvaluea)
-                editToText(etinlaya, tvinlaya)
-                editToTextWithToast(etamountax, tvamountax)
-                editToTextWithToast(etamountay, tvamountay)
-                editToTextWithToast(etamountaz, tvamountaz)
+            editToText(etfundnamechangea, tvfundnamea)
+            editToText(etvaluea, tvvaluea)
+            editToText(etinlaya, tvinlaya)
+            editToTextWithToast(etamountax, tvamountax)
+            editToTextWithToast(etamountay, tvamountay)
+            editToTextWithToast(etamountaz, tvamountaz)
 
-                sumXYZ(tvamountax, tvamountay, tvamountaz, tvamountaxyz, tvamountaxyzold)
-                wrapToFbase(tvfundnamea, tvvaluea, tvamountaxyz, tvinlaya, tvastotalfunda,
-                    tvatmultigrowa, tvautotalgrowa, tvavmultiperca, tvawtotalperca, tvaepartyperca,
-                    tvadpartygrowa)
+            sumXYZ(tvamountax, tvamountay, tvamountaz, tvamountaxyz, tvamountaxyzold)
+            wrapToFbase(tvfundnamea, tvvaluea, tvamountaxyz, tvinlaya, tvastotalfunda,
+                tvatmultigrowa, tvautotalgrowa, tvavmultiperca, tvawtotalperca, tvaepartyperca,
+                tvadpartygrowa)
 
-                caluMultiply(tvvaluea, tvamountaxyz, tvastotalfunda)
-                caluSubtract(tvastotalfunda, tvtotalfundaold, tvatmultigrowa, "%.2f")
-                caluSubtract(tvastotalfunda, tvinlayaold, tvautotalgrowa, "%.2f")
-                caluPercentage(tvatmultigrowa, tvtotalfundaold, tvavmultiperca)
-                caluPercentage(tvautotalgrowa, tvinlayaold, tvawtotalperca)
-                caluSubtract(tvamountaxyz, tvamountaxyzold, tvadpartygrowa, "%.4f")
-                caluPercentage(tvadpartygrowa, tvamountaxyz, tvaepartyperca)
+            caluMultiply(tvvaluea, tvamountaxyz, tvastotalfunda)
+            caluSubtract(tvastotalfunda, tvtotalfundaold, tvatmultigrowa, "%.2f")
+            caluSubtract(tvastotalfunda, tvinlayaold, tvautotalgrowa, "%.2f")
+            caluPercentage(tvatmultigrowa, tvtotalfundaold, tvavmultiperca)
+            caluPercentage(tvautotalgrowa, tvinlayaold, tvawtotalperca)
+            caluSubtract(tvamountaxyz, tvamountaxyzold, tvadpartygrowa, "%.4f")
+            caluPercentage(tvadpartygrowa, tvamountaxyz, tvaepartyperca)
 
-                wrapTotalBlok()
-                btnfirebasea.setTextColor(resources.getColor(R.color.oldtext))
-            } else {
-                swbeta01.isClickable = false
-                swbeta01.isChecked = false
-                btnfirebaset.isEnabled = false
-                btnfirebasea.isEnabled = false
-                swcalculatinga.text = resources.getString(R.string.clicker_De_Calculate)
-                swcalculatinga.setTextColor(resources.getColor(R.color.transparent_color))
-                tvfundnamea.text = ""
-                tvvaluea.text = ""
-                tvinlaya.text = ""
-                tvamountaxyz.text = ""
-                tvamountax.text = ""
-                tvamountay.text = ""
-                tvamountaz.text = ""
+            wrapTotalBlok()
+            btnfirebasea.setTextColor(resources.getColor(R.color.oldtext))
 
-                tvastotalfunda.text = ""
-                tvatmultigrowa.text = ""
-                tvautotalgrowa.text = ""
-                tvavmultiperca.text = ""
-                tvawtotalperca.text = ""
-                tvadpartygrowa.text = ""
-                tvaepartyperca.text = ""
-
-                btnfirebasea.setTextColor(resources.getColor(R.color.transparent_color))
-                Toast.makeText(this, "Data cleared", Toast.LENGTH_SHORT).show()
-            }
             //A//
             btnfirebasea.setOnClickListener {
                 btnfirebasea.setTextColor(resources.getColor(R.color.transparent_dark))
@@ -438,61 +413,34 @@ open class ARefreshDataActivity : AppCompatActivity() {
             }
         }
         //B//
-        swcalculatingb.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked) {
-                swbeta01.isClickable = true
-                btnfirebaseb.isEnabled = true
-                swcalculatingb.text = resources.getString(R.string.clicker_Calculate)
-                swcalculatingb.setTextColor(resources.getColor(R.color.oldtext))
+        btncalculatingb.setOnClickListener {
+            btncalculatingt.isEnabled = true
+            btnfirebaseb.isEnabled = true
+            btncalculatingb.setTextColor(resources.getColor(R.color.oldtext))
 
-                editToText(etfundnamechangeb, tvfundnameb)
-                editToText(etvalueb, tvvalueb)
-                editToText(etinlayb, tvinlayb)
-                editToTextWithToast(etamountbx, tvamountbx)
-                editToTextWithToast(etamountby, tvamountby)
-                editToTextWithToast(etamountbz, tvamountbz)
+            editToText(etfundnamechangeb, tvfundnameb)
+            editToText(etvalueb, tvvalueb)
+            editToText(etinlayb, tvinlayb)
+            editToTextWithToast(etamountbx, tvamountbx)
+            editToTextWithToast(etamountby, tvamountby)
+            editToTextWithToast(etamountbz, tvamountbz)
 
-                sumXYZ(tvamountbx, tvamountby, tvamountbz, tvamountbxyz, tvamountbxyzold)
-                wrapToFbase(tvfundnameb, tvvalueb, tvamountbxyz, tvinlayb, tvastotalfundb,
-                    tvatmultigrowb, tvautotalgrowb, tvavmultipercb, tvawtotalpercb, tvaepartypercb,
-                    tvadpartygrowb)
+            sumXYZ(tvamountbx, tvamountby, tvamountbz, tvamountbxyz, tvamountbxyzold)
+            wrapToFbase(tvfundnameb, tvvalueb, tvamountbxyz, tvinlayb, tvastotalfundb,
+                tvatmultigrowb, tvautotalgrowb, tvavmultipercb, tvawtotalpercb, tvaepartypercb,
+                tvadpartygrowb)
 
-                caluMultiply(tvvalueb, tvamountbxyz, tvastotalfundb)
-                caluSubtract(tvastotalfundb, tvtotalfundbold, tvatmultigrowb, "%.2f")
-                caluSubtract(tvastotalfundb, tvinlaybold, tvautotalgrowb, "%.2f")
-                caluPercentage(tvatmultigrowb, tvtotalfundbold, tvavmultipercb)
-                caluPercentage(tvautotalgrowb, tvinlaybold, tvawtotalpercb)
-                caluSubtract(tvamountbxyz, tvamountbxyzold, tvadpartygrowb, "%.4f")
-                caluPercentage(tvadpartygrowb, tvamountbxyz, tvaepartypercb)
+            caluMultiply(tvvalueb, tvamountbxyz, tvastotalfundb)
+            caluSubtract(tvastotalfundb, tvtotalfundbold, tvatmultigrowb, "%.2f")
+            caluSubtract(tvastotalfundb, tvinlaybold, tvautotalgrowb, "%.2f")
+            caluPercentage(tvatmultigrowb, tvtotalfundbold, tvavmultipercb)
+            caluPercentage(tvautotalgrowb, tvinlaybold, tvawtotalpercb)
+            caluSubtract(tvamountbxyz, tvamountbxyzold, tvadpartygrowb, "%.4f")
+            caluPercentage(tvadpartygrowb, tvamountbxyz, tvaepartypercb)
 
-                wrapTotalBlok()
-                btnfirebaseb.setTextColor(resources.getColor(R.color.oldtext))
-            } else {
-                swbeta01.isClickable = false
-                swbeta01.isChecked = false
-                btnfirebaset.isEnabled = false
-                btnfirebaseb.isEnabled = false
-                swcalculatingb.text = resources.getString(R.string.clicker_De_Calculate)
-                swcalculatingb.setTextColor(resources.getColor(R.color.transparent_color))
-                tvfundnameb.text = ""
-                tvvalueb.text = ""
-                tvinlayb.text = ""
-                tvamountbxyz.text = ""
-                tvamountbx.text = ""
-                tvamountby.text = ""
-                tvamountbz.text = ""
+            wrapTotalBlok()
+            btnfirebaseb.setTextColor(resources.getColor(R.color.oldtext))
 
-                tvastotalfundb.text = ""
-                tvatmultigrowb.text = ""
-                tvautotalgrowb.text = ""
-                tvavmultipercb.text = ""
-                tvawtotalpercb.text = ""
-                tvadpartygrowb.text = ""
-                tvaepartypercb.text = ""
-
-                btnfirebaseb.setTextColor(resources.getColor(R.color.transparent_color))
-                Toast.makeText(this, "Data cleared", Toast.LENGTH_SHORT).show()
-            }
             //B//
             btnfirebaseb.setOnClickListener {
                 btnfirebaseb.setTextColor(resources.getColor(R.color.transparent_dark))
@@ -503,61 +451,34 @@ open class ARefreshDataActivity : AppCompatActivity() {
             }
         }
         //C//
-        swcalculatingc.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked) {
-                swbeta01.isClickable = true
-                btnfirebasec.isEnabled = true
-                swcalculatingc.text = resources.getString(R.string.clicker_Calculate)
-                swcalculatingc.setTextColor(resources.getColor(R.color.oldtext))
+        btncalculatingc.setOnClickListener {
+            btncalculatingt.isEnabled = true
+            btnfirebasec.isEnabled = true
+            btncalculatingc.setTextColor(resources.getColor(R.color.oldtext))
 
-                editToText(etfundnamechangec, tvfundnamec)
-                editToText(etvaluec, tvvaluec)
-                editToText(etinlayc, tvinlayc)
-                editToTextWithToast(etamountcx, tvamountcx)
-                editToTextWithToast(etamountcy, tvamountcy)
-                editToTextWithToast(etamountcz, tvamountcz)
+            editToText(etfundnamechangec, tvfundnamec)
+            editToText(etvaluec, tvvaluec)
+            editToText(etinlayc, tvinlayc)
+            editToTextWithToast(etamountcx, tvamountcx)
+            editToTextWithToast(etamountcy, tvamountcy)
+            editToTextWithToast(etamountcz, tvamountcz)
 
-                sumXYZ(tvamountcx, tvamountcy, tvamountcz, tvamountcxyz, tvamountcxyzold)
-                wrapToFbase(tvfundnamec, tvvaluec, tvamountcxyz, tvinlayc, tvastotalfundc,
-                    tvatmultigrowc, tvautotalgrowc, tvavmultipercc, tvawtotalpercc, tvaepartypercc,
-                    tvadpartygrowc)
+            sumXYZ(tvamountcx, tvamountcy, tvamountcz, tvamountcxyz, tvamountcxyzold)
+            wrapToFbase(tvfundnamec, tvvaluec, tvamountcxyz, tvinlayc, tvastotalfundc,
+                tvatmultigrowc, tvautotalgrowc, tvavmultipercc, tvawtotalpercc, tvaepartypercc,
+                tvadpartygrowc)
 
-                caluMultiply(tvvaluec, tvamountcxyz, tvastotalfundc)
-                caluSubtract(tvastotalfundc, tvtotalfundcold, tvatmultigrowc, "%.2f")
-                caluSubtract(tvastotalfundc, tvinlaycold, tvautotalgrowc, "%.2f")
-                caluPercentage(tvatmultigrowc, tvtotalfundcold, tvavmultipercc)
-                caluPercentage(tvautotalgrowc, tvinlaycold, tvawtotalpercc)
-                caluSubtract(tvamountcxyz, tvamountcxyzold, tvadpartygrowc, "%.4f")
-                caluPercentage(tvadpartygrowc, tvamountcxyz, tvaepartypercc)
+            caluMultiply(tvvaluec, tvamountcxyz, tvastotalfundc)
+            caluSubtract(tvastotalfundc, tvtotalfundcold, tvatmultigrowc, "%.2f")
+            caluSubtract(tvastotalfundc, tvinlaycold, tvautotalgrowc, "%.2f")
+            caluPercentage(tvatmultigrowc, tvtotalfundcold, tvavmultipercc)
+            caluPercentage(tvautotalgrowc, tvinlaycold, tvawtotalpercc)
+            caluSubtract(tvamountcxyz, tvamountcxyzold, tvadpartygrowc, "%.4f")
+            caluPercentage(tvadpartygrowc, tvamountcxyz, tvaepartypercc)
 
-                wrapTotalBlok()
-                btnfirebasec.setTextColor(resources.getColor(R.color.oldtext))
-            } else {
-                swbeta01.isClickable = false
-                swbeta01.isChecked = false
-                btnfirebaset.isEnabled = false
-                btnfirebasec.isEnabled = false
-                swcalculatingc.text = resources.getString(R.string.clicker_De_Calculate)
-                swcalculatingc.setTextColor(resources.getColor(R.color.transparent_color))
-                tvfundnamec.text = ""
-                tvvaluec.text = ""
-                tvinlayc.text = ""
-                tvamountcxyz.text = ""
-                tvamountcx.text = ""
-                tvamountcy.text = ""
-                tvamountcz.text = ""
+            wrapTotalBlok()
+            btnfirebasec.setTextColor(resources.getColor(R.color.oldtext))
 
-                tvastotalfundc.text = ""
-                tvatmultigrowc.text = ""
-                tvautotalgrowc.text = ""
-                tvavmultipercc.text = ""
-                tvawtotalpercc.text = ""
-                tvadpartygrowc.text = ""
-                tvaepartypercc.text = ""
-
-                btnfirebasec.setTextColor(resources.getColor(R.color.transparent_color))
-                Toast.makeText(this, "Data cleared", Toast.LENGTH_SHORT).show()
-            }
             //C//
             btnfirebasec.setOnClickListener {
                 btnfirebasec.setTextColor(resources.getColor(R.color.transparent_dark))
@@ -568,61 +489,34 @@ open class ARefreshDataActivity : AppCompatActivity() {
             }
         }
         //D//
-        swcalculatingd.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked) {
-                swbeta01.isClickable = true
-                btnfirebased.isEnabled = true
-                swcalculatingd.text = resources.getString(R.string.clicker_Calculate)
-                swcalculatingd.setTextColor(resources.getColor(R.color.oldtext))
+        btncalculatingd.setOnClickListener {
+            btncalculatingt.isEnabled = true
+            btnfirebased.isEnabled = true
+            btncalculatingd.setTextColor(resources.getColor(R.color.oldtext))
 
-                editToText(etfundnamechanged, tvfundnamed)
-                editToText(etvalued, tvvalued)
-                editToText(etinlayd, tvinlayd)
-                editToTextWithToast(etamountdx, tvamountdx)
-                editToTextWithToast(etamountdy, tvamountdy)
-                editToTextWithToast(etamountdz, tvamountdz)
+            editToText(etfundnamechanged, tvfundnamed)
+            editToText(etvalued, tvvalued)
+            editToText(etinlayd, tvinlayd)
+            editToTextWithToast(etamountdx, tvamountdx)
+            editToTextWithToast(etamountdy, tvamountdy)
+            editToTextWithToast(etamountdz, tvamountdz)
 
-                sumXYZ(tvamountdx, tvamountdy, tvamountdz, tvamountdxyz, tvamountdxyzold)
-                wrapToFbase(tvfundnamed, tvvalued, tvamountdxyz, tvinlayd, tvastotalfundd,
-                    tvatmultigrowd, tvautotalgrowd, tvavmultipercd, tvawtotalpercd, tvaepartypercd,
-                    tvadpartygrowd)
+            sumXYZ(tvamountdx, tvamountdy, tvamountdz, tvamountdxyz, tvamountdxyzold)
+            wrapToFbase(tvfundnamed, tvvalued, tvamountdxyz, tvinlayd, tvastotalfundd,
+                tvatmultigrowd, tvautotalgrowd, tvavmultipercd, tvawtotalpercd, tvaepartypercd,
+                tvadpartygrowd)
 
-                caluMultiply(tvvalued, tvamountdxyz, tvastotalfundd)
-                caluSubtract(tvastotalfundd, tvtotalfunddold, tvatmultigrowd, "%.2f")
-                caluSubtract(tvastotalfundd, tvinlaydold, tvautotalgrowd, "%.2f")
-                caluPercentage(tvatmultigrowd, tvtotalfunddold, tvavmultipercd)
-                caluPercentage(tvautotalgrowd, tvinlaydold, tvawtotalpercd)
-                caluSubtract(tvamountdxyz, tvamountdxyzold, tvadpartygrowd, "%.4f")
-                caluPercentage(tvadpartygrowd, tvamountdxyz, tvaepartypercd)
+            caluMultiply(tvvalued, tvamountdxyz, tvastotalfundd)
+            caluSubtract(tvastotalfundd, tvtotalfunddold, tvatmultigrowd, "%.2f")
+            caluSubtract(tvastotalfundd, tvinlaydold, tvautotalgrowd, "%.2f")
+            caluPercentage(tvatmultigrowd, tvtotalfunddold, tvavmultipercd)
+            caluPercentage(tvautotalgrowd, tvinlaydold, tvawtotalpercd)
+            caluSubtract(tvamountdxyz, tvamountdxyzold, tvadpartygrowd, "%.4f")
+            caluPercentage(tvadpartygrowd, tvamountdxyz, tvaepartypercd)
 
-                wrapTotalBlok()
-                btnfirebased.setTextColor(resources.getColor(R.color.oldtext))
-            } else {
-                swbeta01.isClickable = false
-                swbeta01.isChecked = false
-                btnfirebaset.isEnabled = false
-                btnfirebased.isEnabled = false
-                swcalculatingd.text = resources.getString(R.string.clicker_De_Calculate)
-                swcalculatingd.setTextColor(resources.getColor(R.color.transparent_color))
-                tvfundnamed.text = ""
-                tvvalued.text = ""
-                tvinlayd.text = ""
-                tvamountdxyz.text = ""
-                tvamountdx.text = ""
-                tvamountdy.text = ""
-                tvamountdz.text = ""
+            wrapTotalBlok()
+            btnfirebased.setTextColor(resources.getColor(R.color.oldtext))
 
-                tvastotalfundd.text = ""
-                tvatmultigrowd.text = ""
-                tvautotalgrowd.text = ""
-                tvavmultipercd.text = ""
-                tvawtotalpercd.text = ""
-                tvadpartygrowd.text = ""
-                tvaepartypercd.text = ""
-
-                btnfirebased.setTextColor(resources.getColor(R.color.transparent_color))
-                Toast.makeText(this, "Data cleared", Toast.LENGTH_SHORT).show()
-            }
             //D//
             btnfirebased.setOnClickListener {
                 btnfirebased.setTextColor(resources.getColor(R.color.transparent_dark))
@@ -633,28 +527,18 @@ open class ARefreshDataActivity : AppCompatActivity() {
             }
         }
         ///BTa///
-        swbeta01.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked) {
-                swbeta01.text = resources.getString(R.string.clicker_beta)
-                swbeta01.setTextColor(resources.getColor(R.color.accent_red))
-                btnfirebaset.setTextColor(resources.getColor(R.color.oldtext))
+        btncalculatingt.setOnClickListener {
+            btncalculatingt.text = resources.getString(R.string.clicker_OnLock)
+            btnfirebaset.setTextColor(resources.getColor(R.color.oldtext))
 
-                keyValueDatapost()
+            keyValueDatapost()
 
-                Toast.makeText(this, "Beta Action ON", Toast.LENGTH_SHORT).show()
-            } else {
-                swbeta01.text = resources.getString(R.string.clicker_De_beta)
-                swbeta01.setTextColor(resources.getColor(R.color.transparent_color))
-                btnfirebaset.setTextColor(resources.getColor(R.color.transparent_color))
+            Toast.makeText(this, " unLOCKed", Toast.LENGTH_LONG).show()
 
-
-
-                Toast.makeText(this, "Beta Action OFF", Toast.LENGTH_SHORT).show()
-            }
             btnfirebaset.setOnClickListener {
                 btnfirebaset.setTextColor(resources.getColor(R.color.transparent_dark))
                 saveDatapost(keyValueDatapost())
-                Toast.makeText(this, "Firebase BTN is clicked", Toast.LENGTH_LONG).show()
+                btnfirebaset.isEnabled = false
             }
         }
     }

@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="27dp"
+    android:layout_height="wrap_content"
     android:background="#031014"
     android:orientation="horizontal"
     app:cardBackgroundColor="#031014">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
@@ -23,7 +23,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#E7E4DA"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="user" />
 
@@ -38,7 +38,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#E7E4DA"
-            android:textSize="14sp"
+            android:textSize="10sp"
             tools:text="datum" />
 
         <TextView
@@ -51,7 +51,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#E7E4DA"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="totalf" />
 
@@ -65,7 +65,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="multig" />
 
@@ -79,7 +79,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="totalg" />
 
@@ -93,7 +93,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#F1CC50"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="multip" />
 
@@ -107,7 +107,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#E7E4DA"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="totalf" />
 
@@ -121,7 +121,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="multig" />
 
@@ -135,7 +135,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="totalg" />
 
@@ -149,7 +149,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#F1CC50"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="multip" />
 
@@ -163,7 +163,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#E7E4DA"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="totalf" />
 
@@ -177,7 +177,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="multig" />
 
@@ -191,7 +191,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="totalg" />
 
@@ -205,7 +205,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#F1CC50"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="multip" />
 
@@ -219,7 +219,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#E7E4DA"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="totalf" />
 
@@ -233,7 +233,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="multig" />
 
@@ -247,7 +247,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="@color/transparent_backcolor"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="totalg" />
 
@@ -261,7 +261,7 @@
             android:fontFamily="@font/ubuntu_light"
             android:textAlignment="center"
             android:textColor="#F1CC50"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             tools:text="multip" />
 

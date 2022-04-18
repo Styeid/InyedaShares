@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.133" />
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/drawable/fab_adddatapost.xml" value="0.133" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.134" />
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/drawable/ic_fresha.xml" value="0.133" />
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/drawable/ic_launcher_background.xml" value="0.133" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/drawable/ic_refreshdata.xml" value="0.134" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/a_activity_refresh_data.xml" value="0.25416666666666665" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/activity_brefresh_data.xml" value="0.25416666666666665" />
@@ -12,7 +16,7 @@
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/activity_first_follow_up.xml" value="0.43397573162027125" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/activity_login.xml" value="0.47578125" />
-        <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/activity_refresh_data.xml" value="0.8" />
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/activity_refresh_data.xml" value="0.6842105263157895" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/activity_sec_follow_up.xml" value="0.4" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/activity_tri_follow_up.xml" value="5.6" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/item_datafunds.xml" value="0.25416666666666665" />
@@ -28,6 +32,8 @@
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/layout/item_olddata.xml" value="0.25416666666666665" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/menu/menu_history_data.xml" value="0.25416666666666665" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/menu/menu_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1215" />
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve01-02/aa/01app/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.133" />
       </map>
     </option>
   </component>

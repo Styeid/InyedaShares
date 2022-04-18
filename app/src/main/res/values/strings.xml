@@ -18,7 +18,9 @@
     <!--string name="fill_data_amount">Cancel</string -->
     <string name="switcher_OnOff"> </string>
     <string name="clicker_CopytoFirebase">F-Base</string>
-    <string name="clicker_Calculate">Calc. On</string>
+    <string name="clicker_OnLock">unLOCK</string>
+    <string name="clicker_DeLock">LOCKed</string>
+    <string name="clicker_Calculate">Calc.</string>
     <string name="clicker_De_Calculate">Calc. Off</string>
     <string name="clicker_submit">Submit</string>
     <string name="clicker_cancel">Cancel</string>
